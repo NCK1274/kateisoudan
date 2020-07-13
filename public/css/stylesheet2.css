@@ -1,0 +1,441 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: normal normal normal 62.5%/1"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+	color: #333;
+	font-size: 13px;
+	line-height: 150%;
+}
+/*, ::before, ::after{
+	box-sizing: border-box;
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+/*----------------- header -----------------*/
+
+.header{
+	display: flex;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFF;
+	bottom: 0;
+	height: 60px;
+	padding: 35px 0 20px;
+	width: 100%;
+	box-sizing: content-box;
+	justify-content: space-between;
+}
+.header__log img {
+	margin: 0;
+	padding: 0;
+	width: 140px;
+	height: 20px;
+	line-height: 1;
+	vertical-align: top;
+}
+.header__nav{
+	display: flex;
+}
+.header__nav__txt{
+	margin-left: 20px;
+		
+	}
+.header__nav__txt a{
+	color: #333;
+	text-decoration: none;
+}
+
+/*.header-upper:before, .clearfix:after{
+	display: table;
+	content: " ";
+}
+.header-upper{
+	max-width: 1330px;
+	height: 64px;
+	padding: 0 16px;
+	margin: 0 auto;
+	position: relative;
+	display: -webkit-flex;
+	width: 1300px;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+}*/
+
+/*----------------- main -----------------*/
+
+.section{
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+.main {
+	width: 80%;
+	margin: auto;
+	padding: 0px;
+	border: 0px;
+	background-size: 1250px auto;
+	background-position: center bottom;
+
+	background-color: #FFF;
+	position: relative;
+	top: 10px;
+
+}
+.main .contents {
+	font-size: 3em;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    margin-bottom: 50px;
+	padding: 51px 30px 20px!important;
+	width: 100%;
+	max-width: 1020px;
+}
+#main .bx-wrapper{
+	margin: 0 auto 27px;
+	background: url(/img/main_pc.jpg)center 120%/100% auto no-repeat;
+	background-size: 1250px auto;
+	background-position: center bottom;
+	overflow: hidden;
+
+}
+#vegas {
+	width: 100vw;
+	height: 100vh
+}
+.btnArea {
+	position: absolute;
+	z-index: 2%;
+	top: 15.2632vw;
+	bottom: auto;
+	left: auto;
+	width: 29.3233vw;
+	height: 29.3233vw;
+	right: 50%;
+	margin-right: 14.5113vw;
+	border-radius: 50%;
+	background-color: #FFF;
+}
+.list {
+	padding: 6.015vw 4.1353vw 2.7273vw;
+	display: block;
+	width: 100%;
+	max-width: none;
+	padding: 6.015vw 4.1353vw 2.7273vw;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: center;
+	margin: 0 auto;
+	-webkit-box-pack: center;
+	-webkit-box-align: stretch;
+	list-style: none;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+.item-profilling{
+	width: 21.0526vw;
+	margin: 0 auto;
+	box-sizing: 
+}
+.button-arrow{
+	height: 4.5113vw;
+    font-size: 1.4286vw;
+    line-height: 1.2105;
+    padding-right: 2.406vw;
+    padding-left: 2.406vw;
+    border-color: #0550bf;
+    background-color: #0550bf;
+    color: white;
+    transition-duration: 0.3s;
+    transition-property: border,background,color;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    width: 100%;
+    max-width: 320px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 auto;
+    border-radius: 4px;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+.button-arrow:before {
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: -2px;
+    display: block;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    content: "";
+    opacity: 0;
+    -webkit-transform: scale3d(0.6, 0.6, 1);
+    transform: scale3d(0.6, 0.6, 1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+/*----------------- navgation -----------------*/
+
+#navgation{
+	width: 100%;
+}
+#wrapper{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none; 
+}
+#sp-menu{
+	filter: ;
+	display: block;
+	height: 20px;
+	margin: 0;
+	padding: 10px;
+	color: #FFF;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: blue; 
+}
+#pc_menu{
+	lex-direction: row;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+}
+
+#pc_menu ul .menu1 a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: 4px;
+	left: 62px;
+	background: url(image/menu1.png) top center no-repeat;
+	background-size: cover;
+	transition: all .2s ease-out;
+
+}
+#pc_menu ul .menu2 a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: 4px;
+	left: 62px;
+	background: url(image/menu2.png) top center no-repeat;
+	background-size: cover;
+	transition: all .2s ease-out;
+}
+#pc_menu ul .menu3 a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: 4px;
+	left: 62px;
+	background: url(image/menu3.png) top center no-repeat;
+	background-size: cover;
+	transition: all .2s ease-out;	
+}
+#pc_menu ul .menu4 a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 65px;
+	height: 30px;
+	top: 4px;
+	left: 62px;
+	background: url(image/menu4.png) top center no-repeat;
+	background-size: cover;
+	transition: all .2s ease-out;
+	
+}
+#pc_menu ul .menu5 a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: 4px;
+	left: 62px;
+	background: url(image/menu5.png) top center no-repeat;
+	background-size: cover;
+	transition: all .2s ease-out;
+}
+#pc_menu ul .menu1 a:after{
+	content: 'adout';
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    color: #6ccde3;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding-left: 36px;
+}
+#pc_menu ul .menu2 a:after{
+	content: 'content';
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    color: #6ccde3;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding-left: 36px;
+}
+#pc_menu ul .menu3 a:after{
+	content: 'service';
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    color: #6ccde3;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding-left: 36px;
+}
+#pc_menu ul .menu4 a:after{
+	content: 'office';
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    color: #6ccde3;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding-left: 36px;
+}
+#pc_menu ul .menu5 a:after{
+	content: 'contact';
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    color: #6ccde3;
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    padding-left: 36px;
+}
+
+
+/*----------------- information -----------------*/
+
+#information{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+#information h2{
+	position: relative;
+	padding-top: 32px;
+	padding-bottom: 80px;
+	background: #d2e4ff;
+}
+
+/*----------------- consutation -----------------*/
+
+#consutation{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+/*----------------- service -----------------*/
+
+#service{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+/*----------------- system -----------------*/
+
+#system{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+/*----------------- office -----------------*/
+
+#office{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+/*----------------- entry -----------------*/
+
+#entry{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+/*----------------- footer -----------------*/
+
+#footer{
+	float: left;
+	width: 95%;
+	padding: 10px 30px 10px 10px;
+}
+
+
+
+
+.top__header{
+
+
+
+
+	$__new_office{
+
+
+	}
+	&__office{
+
+
+	}
+	&__
+
+}
+

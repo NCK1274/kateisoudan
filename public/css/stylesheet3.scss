@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #333;
+  font-size: 13px;
+  line-height: 150%;
+}
+
+/*----------------- header -----------------*/
+
+header {
+  height: 100px;
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+  color: #007bff;
+
+  .headline {
+    line-height: 100px;
+    float: left;
+    margin-left: 100px;
+
+    img {
+      width: 200px;
+      height: 80px;
+    }
+  }
+}
+
+.head-list {
+  line-height: 100px;
+  float: left;
+  margin-left: 30px;
+  list-style: none;
+}
+
+.head-list__item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* -------------------- wrapper -------------------- */
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  border: 0px;
+  background-color: #FFF;
+  top: 10px;
+}
+
+/* -------------------- main -------------------- */
+
+.main {
+  width: 100%;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.corridor {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------- Vegas -------------------- */
+
+.Vegas {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Vegas-Inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Vegas-Inner-Item {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* -------------------- nav -------------------- */
+
+.navigation {
+  width: 100%;
+  box-sizing: content-box;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      width: 20%;
+
+      a {
+        display: block;
+        height: 60px;
+        margin: 0;
+        padding: 10px;
+        color: #FFF;
+        font-size: 20px;
+        text-decoration: none;
+        background-color: blue;
+
+        &:hover {
+          filter: drop-shadow(10px 10px 10px black);
+        }
+      }
+    }
+  }
+}
+
+/* -------------------- infomation -------------------- */
+
+.infomation {
+  margin-bottom: 4px;
+
+  h2 {
+    margin: 0;
+    color: #FFF;
+    font-size: 30px;
+    display: block;
+    background: #F90;
+  }
+}
+
+/* -------------------- info -------------------- */
+
+.info {
+  width: 300px;
+}
+
+.info-top img {
+  width: 20%;
+}
+
+.info-title {
+  width: 80%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-area {
+  width: 100%;
+  height: 150px;
+  margin-top: 18px;
+}
+
+.info-item {
+  width: 200px;
+  height: 10px;
+  background-color: #08AEEA;
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+  margin: 0 auto;
+}
+
+.info-logo {
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* -------------------- consutation -------------------- */
+
+.consutation {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+  padding-top: 0;
+  clear: both;
+  display: block;
+  background-color: #d2e4ff;
+}
+
+.cons-top {
+  margin: 0;
+  padding: 3px;
+  color: #FFF;
+  font-size: 30px;
+  display: block;
+  background: #F90;
+}
+
+/* -------------------- cons -------------------- */
+
+.cons-txt {
+  width: 300px;
+
+  .cons-img {
+    width: 30%;
+    padding: 9px;
+    border: 9px solid blue;
+    background-color: yellow;
+    border-radius: 130px;
+  }
+}
+
+.cons-bottom {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: initial;
+}
+
+/* -------------------- service -------------------- */
+
+.service {
+  width: 100%;
+  margin: auto;
+  padding: 70px 0;
+  padding-top: 0;
+  clear: both;
+  display: block;
+  background-color: #f4f4f4;
+}
+
+.service-body {
+  text-align: center;
+}
+
+.service-txt h2 {
+  margin: 0;
+  padding: 3px;
+  color: #FFF;
+  font-size: 30px;
+  display: block;
+  background: #F90;
+}
+
+/* -------------------- ser -------------------- */
+
+.grid {
+  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+}
+
+/* -------------------- system -------------------- */
+
+.system {
+  text-align: center;
+  background-color: #065fe3;
+
+  h2 {
+    margin: 0;
+    padding: 3px;
+    color: #FFF;
+    font-size: 30px;
+    display: block;
+    background: #F90;
+  }
+}
+
+/* -------------------- office -------------------- */
+
+.office {
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    padding: 3px;
+    color: #FFF;
+    font-size: 30px;
+    display: block;
+    background: #F90;
+  }
+}
+
+.office-top {
+  padding: 20px 30px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+.office p {
+  margin: 0;
+  color: #1d1d1d;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* -------------------- entry -------------------- */
+
+.entry {
+  background-color: #39F;
+}
+
+.entry-box {
+  font-size: 30px;
+}
+
+.entry-box__btn {}
+
+/* -------------------- footer -------------------- */
+
+.footer {
+  height: auto;
+}
+
+.footer-txt {
+  width: 100%;
+  padding: 0;
+  background-color: #d2e4ff;
+}
+
+.footer-log {
+  width: 140px;
+  margin: 0;
+  line-height: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+}
+
+.footer-nav {
+  display: inline-block;
+  float: right;
+  margin-left: 30px;
+  list-style: none;
+}
+
+.footer-low {
+  display: inline-block;
+  width: 50%;
+  letter-spacing: 0em;
+  list-style: none;
+  border: 3px solid #90cdeb;
+}
+
+/* -------------------- copyright -------------------- */
+
+.copyright {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  padding: 5px 0 5px 0;
+  background: #065fe3;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+}
