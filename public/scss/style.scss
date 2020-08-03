@@ -23,18 +23,20 @@ body {
   html {
     font-size: 75.8929%;
   }
-}
-.sp-nav {
-  display: none;
-}
+// }
+// .sp-nav {
+//   display: none;
+// }
 
-// @media only screen and (max-width: 640px) {
+// @media screen and (max-width: 640px) {
 //   .header-nav {
 //     display: none;
 //   }
 
 //   .sp-nav {
-//     z-index: 1;                         /*前面に出す*/
+//     z-index: 1;
+
+//     /*前面に出す*/
 //     position: fixed;
 //     top: 0;
 //     left: 0;
@@ -45,10 +47,13 @@ body {
 //     background: rgba(0, 0, 0, 0.8);
 //     opacity: 0;
 //     transform: translateY(-100%);
-//     transition: all .2s ease-in-out;    /*closeを押した時に表示、非表示にする*/
+//     transition: all .2s ease-in-out;
+
+//     /*closeを押した時に表示、非表示にする*/
 //   }
+
   
-//   // /* -------------------- ハンバーガーメニュー -------------------- */
+// //   // /* -------------------- ハンバーガーメニュー -------------------- */
 
 //   #hamburger {
 //     position: relative;
@@ -165,7 +170,7 @@ body {
 //     transform: translateY(0);
 //     opacity: 1;
 //   }
-// }
+}
 /*----------------- header -----------------*/
 
 header {

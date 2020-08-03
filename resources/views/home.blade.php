@@ -33,21 +33,20 @@
     <!--フォントオーサムリンク-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 
-    <!--ハンバーガーメニューの表示の関数-->
-    <!-- <script>
-    $(function() {
-      const hum = $('#hamburger, .close')
-      const nav = $('.sp-nav')
-      hum.on('click', function(){
-         nav.toggleClass('toggle');
-      });
-    });
-    </script> -->
 
     </head>
 
 <body>
     <!-- <div class="container">   -->
+        <script>
+                $(function() {
+                  const hum = $('#hamburger, .close')
+                  const nav = $('.sp-nav')
+                  hum.on('click', function(){
+                     nav.toggleClass('toggle');
+                  });
+                });
+        </script>
     <!--ヘッダー部分の実装-->
         <header>
             <div class="header-top">
@@ -61,6 +60,10 @@
                       <li class="header-item"><a href="#">ログイン</a></li>
                     </ul>
                 </nav>
+                <!--レスポンシブヘッダーハンバーガー部分の実装-->
+                 <div id="hamburger">
+                    <span></span>
+                </div>
                 <nav class="sp-nav">
                     <ul>
                         <li><a href="#">事業所一覧</a></li>
@@ -69,10 +72,8 @@
                         <li class="close"><span>閉じる</span></li>
                     </ul>
                 </nav>
-      <!--レスポンシブヘッダーハンバーガー部分の実装-->
-                <div id="hamburger">
-                    <span></span>
-                </div>    
+                <!--ハンバーガーメニューの表示の関数-->
+      
             </div>
         </header>
     
