@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -23,7 +23,7 @@
                         </div>
                     @endif
  
-                    {!! Form::open(['url' => 'contact/confirm',
+                    {!! Form::open(['url' => 'entry/store',
                                 'class' => 'form-horizontal']) !!}
  
  <!-- お名前の記入欄 --> 
@@ -100,18 +100,18 @@
                     </div>
 
  <!-- 相談受付内容の項目欄 -->
-                    <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-                        {!! Form::label('gender', '性別:', ['class' => 'col-sm-2 control-label']) !!}
+                    <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                        {!! Form::label('type', '具体的相談内容:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
-                            @foreach($genders as $key => $value)
+                            @foreach($types as $key => $value)
                                 <label class="checkbox-inline">
-                                    {!! Form::radio('gender', $value) !!}
+                                    {!! Form::radio('type', $value) !!}
                                     {{ $value }}
                                 </label>
                             @endforeach
-                            @if ($errors->has('gender'))
+                            @if ($errors->has('type'))
                                 <span class="help-block">
-                            <strong>{{ $errors->first('gender') }}</strong>
+                            <strong>{{ $errors->first('type') }}</strong>
                         </span>
                             @endif
                         </div>

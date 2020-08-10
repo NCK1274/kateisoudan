@@ -1,16 +1,13 @@
 @extends('layouts.app')
-
+ 
 @section('content')
-
-    <h1 style="margin-bottom:30px;">事業者エントリー</h1>
-
-    <!-- form -->
-
-    <div class="container">
+ 
+ 
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading"></div>
+                <div class="panel-heading">新規登録画面</div>
                 <div class="panel-body">
                     {{-- エラーの表示 --}}
                     @if ($errors->any())
@@ -23,12 +20,12 @@
                         </div>
                     @endif
  
-                    {!! Form::open(['url' => 'entry/store',
+                    {!! Form::open(['url' => 'member/confirm',
                                 'class' => 'form-horizontal']) !!}
  
  <!-- お名前の記入欄 --> 
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                        {!! Form::label('name', '代表者氏名:', ['class' => 'col-sm-2 control-label']) !!}
+                        {!! Form::label('name', 'お名前:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
                             {!! Form::text('name', null, ['class' => 'form-control']) !!}
  
@@ -64,19 +61,36 @@
                             @endif
                         </div>
                     </div>
- <!-- エリアの項目欄 -->
-                    <div class="form-group{{ $errors->has('erea') ? ' has-error' : '' }}">
-                        {!! Form::label('erea', '対象者:', ['class' => 'col-sm-2 control-label']) !!}
+ <!-- 対象者の項目欄 -->
+                    <div class="form-group{{ $errors->has('person') ? ' has-error' : '' }}">
+                        {!! Form::label('person', '対象者:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
-                            @foreach($ereas as $key => $value)
+                            @foreach($persons as $key => $value)
                                 <label class="checkbox-inline">
-                                    {!! Form::radio('erea', $value) !!}
+                                    {!! Form::radio('person', $value) !!}
                                     {{ $value }}
                                 </label>
                             @endforeach
-                            @if ($errors->has('erea'))
+                            @if ($errors->has('person'))
                                 <span class="help-block">
-                            <strong>{{ $errors->first('erea') }}</strong>
+                            <strong>{{ $errors->first('person') }}</strong>
+                        </span>
+                            @endif
+                        </div>
+                    </div>
+ <!-- 性別の項目欄 -->
+                    <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+                        {!! Form::label('gender', '性別:', ['class' => 'col-sm-2 control-label']) !!}
+                        <div class="col-sm-10">
+                            @foreach($genders as $key => $value)
+                                <label class="checkbox-inline">
+                                    {!! Form::radio('gender', $value) !!}
+                                    {{ $value }}
+                                </label>
+                            @endforeach
+                            @if ($errors->has('gender'))
+                                <span class="help-block">
+                            <strong>{{ $errors->first('gender') }}</strong>
                         </span>
                             @endif
                         </div>
@@ -98,25 +112,25 @@
                             @endif
                         </div>
                     </div>
-
- <!-- 相談受付内容の項目欄 -->
+<!-- お問い合わせの種類一覧欄 --> 
                     <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
-                        {!! Form::label('type', '相談受付:', ['class' => 'col-sm-2 control-label']) !!}
+                        {!! Form::label('type', 'お問い合わせ種類:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
                             @foreach($types as $key => $value)
                                 <label class="checkbox-inline">
-                                    {!! Form::checkbox('type', $value) !!}
+                                    {!! Form::checkbox('type[]', $value) !!}
                                     {{ $value }}
                                 </label>
                             @endforeach
                             @if ($errors->has('type'))
                                 <span class="help-block">
-                            <strong>{{ $errors->first('type') }}</strong>
-                        </span>
+                                <strong>{{ $errors->first('type') }}</strong>
+                            </span>
                             @endif
                         </div>
-                    </div>
- <!-- 一言記入欄 --> 
+                    </div>                    
+
+ <!-- 相談内容の項目欄 --> 
                     <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
                         {!! Form::label('body', '内容:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
@@ -128,38 +142,13 @@
                             @endif
                         </div>
                     </div>
-<!-- 画像添付--> 
-                    <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-                        {!! Form::label('image', '画像:', ['class' => 'col-sm-2 control-label']) !!}
-                        <div class="col-sm-10">
-                            {!! Form::file('image', null, ['class' => 'form-control']) !!}
- 
-                            @if ($errors->has('image'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('image') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-<!-- HP添付 --> 
-                   <div class="form-group{{ $errors->has('hp') ? ' has-error' : '' }}">
-                        {!! Form::label('hp', 'ホームページ :', ['class' => 'col-sm-2 control-label']) !!}
-                        <div class="col-sm-10">
-                            {!! Form::url('hp', null, ['class' => 'form-control']) !!}
- 
-                            @if ($errors->has('hp'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('hp') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
  <!-- 確認ボタン --> 
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
                             {!! Form::submit('確認', ['class' => 'btn btn-primary']) !!}
                         </div>
                     </div>
+
  <!-- フォーム画面終了 --> 
                     {!! Form::close() !!}
                 </div>
@@ -167,4 +156,4 @@
         </div>
     </div>
 </div>
-@endsection    
+@endsection

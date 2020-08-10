@@ -12,44 +12,44 @@
                     <table class="table">
                         <tr>
                             <th>お名前</th>
-                            <td>{{ $contact->name }}</td>
+                            <td>{{ $member->name }}</td>
                         </tr>
                         <tr>
-                            <th>電話番号/th>
-                            <td>{{ $contact->$tel }}</td>
+                            <th>電話番号</th>
+                            <td>{{ $member->tel }}</td>
                         </tr>
                         <tr>
                             <th>メールアドレス</th>
-                            <td>{{ $contact->email }}</td>
+                            <td>{{ $member->email }}</td>
                         </tr>
                         <tr>
                             <th>対象者</th>
-                            <td>{{ $contact->person }}</td>
+                            <td>{{ $member->person }}</td>
                         </tr>
                         <tr>
                             <th>性別</th>
-                            <td>{{ $contact->gender }}</td>
+                            <td>{{ $member->gender }}</td>
                         </tr>
                         <tr>
                             <th>年齢</th>
-                            <td>{{ $contact->$age }}</td>
+                            <td>{{ $member->age }}</td>
                         </tr>
                         <tr>
                             <th>相談内容</th>
                             <td>{{ $type }}</td>
                         </tr>
                         <tr>
-                            <th>具体的詳細/th>
-                            <td>{{ $contact->$body }}</td>
+                            <th>具体的詳細</th>
+                            <td>{{ $member->body }}</td>
                         </tr>
 
                     </table>
  
-                    {!! Form::open(['url' => 'contact/complete',
+                    {!! Form::open(['url' => 'member/complete',
                                     'class' => 'form-horizontal',
                                     'id' => 'post-input']) !!}
  
-                    @foreach($contact->getAttributes() as $key => $value)
+                    @foreach($member->getAttributes() as $key => $value)
                         @if(isset($value))
                             @if(is_array($value))
                                 @foreach($value as $subValue)

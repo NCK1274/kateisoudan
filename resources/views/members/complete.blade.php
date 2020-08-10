@@ -9,9 +9,10 @@
                 <div class="panel-body">
                     <h1>ありがとうございました。</h1>
                     <h2>無事に登録完了いたしました。</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+				</div>
+                <a href="./member.blade.php">戻る</a>
+			</div>
+		</div>
+	</div>
 </div>
 @endsection

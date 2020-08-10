@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EntryRequest;
 use App\Http\Controllers\Controller;
+
 use App\Entry;
 
 class EntriesController extends Controller
@@ -17,7 +18,7 @@ class EntriesController extends Controller
         return view('entries.form',compact('ereas','ages','types'));
     }
 
-    public function store(Request $request)
+    public function store(EntryRequest $request)
     {
         $entry = new Entry($request->all());                        //entry(モデル)のインスタンス化するApp\Http\Requestsの中身を全て取得する
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMembersTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,14 @@ class CreateMembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('members', function (Blueprint $table) {
-            $table->bsigIncrements('id');
-            $table->string('username');
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('name');
-            $table->string('pasword');
+            $table->string('title');
             $table->string('tel');
             $table->string('email');
-            $table->string('person');
-            $table->string('age');
-            $table->string('gender');
-            $table->string('type');
             $table->text('body');
             $table->timestamps();
-
         });
     }
 
@@ -37,6 +31,6 @@ class CreateMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+        Schema::dropIfExists('contacts');
     }
 }
