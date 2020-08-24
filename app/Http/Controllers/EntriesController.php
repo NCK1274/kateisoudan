@@ -22,6 +22,7 @@ class EntriesController extends Controller
     public function store(EntryRequest $request)
     {
         $entry = new Entry($request->all());                        //entry(モデル)のインスタンス化するApp\Http\Requestsの中身を全て取得する
+        
 
         // $type = '';
         // if (isset($request->type)) {                                   //isset関数は値が入ってるかチェックする
@@ -33,6 +34,8 @@ class EntriesController extends Controller
     }
     public function complete(Request $request)
     {
+        // var_dump($_POST);
+        // exit;
 
         $input = $request->except('action');
      
@@ -42,7 +45,7 @@ class EntriesController extends Controller
          
          
             // データを保存
-        // Entry::create($request->all());
+        Entry::create($request->all());
          
         //     // 二重送信防止
         // $request->session()->regenerateToken();

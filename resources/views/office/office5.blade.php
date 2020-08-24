@@ -13,7 +13,7 @@
   <body class="bg-light">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-white" href="#">にこにこキャンプ</a>
+        <a class="navbar-brand text-white" href="#">NPO法人かわもと学習サポートセンター</a>
         <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -90,7 +90,7 @@
     <div class="container bg-white py-5 my-5">
       <!--にこにこキャンプの特徴-->
       <div id="column">
-        <h2 class="text-center py-3">にこにこキャンプの特徴</h2>
+        <h2 class="text-center py-3">特徴</h2>
       </div>
       <div class="row">
         <div class="col-md-4 col-12">
@@ -112,12 +112,12 @@
         <div class="col-md-6 col-12 p-0 align-self-center h3 p-4"> ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
         </div>
         <div class="col-md-6 col-12 p-0 align-self-center">
-          <img class="img-fluid" src="img/img7.jpg" alt="">
+          <img class="img-fluid" src="https://picsum.photos/500/500?grayscale" alt="">
         </div>
       </div>
       <div class="d-flex flex-wrap justify-content-center">
         <div class="col-md-6 col-12 p-0 align-self-center">
-          <img class="img-fluid" src="img/img8.jpg" alt="">
+          <img class="img-fluid" src="https://picsum.photos/500/500?grayscale" alt="">
         </div>
         <div class="col-md-6 col-12 p-0 align-self-center h3 p-4">
           ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
@@ -333,7 +333,7 @@
             </h2>
           </div>
       
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
               カウンセラーが常に在籍しておりますので、どの様なご相談でもお気軽にどうぞ。            </div>
           </div>
@@ -474,7 +474,7 @@
             <div class="py-4">
               <h4 class="d-inline-block py-3 border-bottom border-info">Portfolio</h4>
             </div>
-            <a class="twitter-timeline" data-lang="ja" data-height="500" href="＃">Tweets by nikonikokyanpu</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>          </div>
+            <a class="twitter-timeline" data-lang="ja" data-height="500" href="＃">Tweets by kawamotosaport</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>          </div>
         </div>
       </div>
       <div class="bg-dark text-white text-center p-3">

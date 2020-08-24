@@ -55,7 +55,7 @@
     <div id="Flex">
       <h2 class="text-center py-3">事業所一覧</h2>
     </div>
-
+    <!-- 事業所 -->
     <div class="card mb-3 " >
       <div class="row no-gutters">
         <div class="col-md-4 px-2 py-2">
@@ -76,7 +76,69 @@
         </div> 
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">かわもと学習サポートセンター<div class="star"><a href="#"></a></div></h5>
+            <h2 class="card-title font-weight-bold">NPO法人かわもと学習サポートセンター<div class="star"><a href="#"></a></div></h2>
+            <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
+            <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
+            <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
+            <a href="office1" class="btn btn-primary">詳細を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 事業所 -->
+    <div class="card mb-3 " >
+      <div class="row no-gutters">
+        <div class="col-md-4 px-2 py-2">
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top img-thumbnail" src="https://picsum.photos/200" alt="Card image cap">
+          </div>
+          <div class="row pt-1">
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title font-weight-bold">NPO法人かわもと学習サポートセンター<div class="star"><a href="#"></a></div></h2>
+            <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
+            <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
+            <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
+            <a href="office1" class="btn btn-primary">詳細を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 事業所 -->
+    <div class="card mb-3 " >
+      <div class="row no-gutters">
+        <div class="col-md-4 px-2 py-2">
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top img-thumbnail" src="https://picsum.photos/200" alt="Card image cap">
+          </div>
+          <div class="row pt-1">
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title font-weight-bold">NPO法人かわもと学習サポートセンター<div class="star"><a href="#"></a></div></h2>
             <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
             <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
             <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>

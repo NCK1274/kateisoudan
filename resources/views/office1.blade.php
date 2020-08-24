@@ -70,7 +70,7 @@
         <img class="img-fluid img-thumbnail" src="https://picsum.photos/1000/300?grayscale" alt="">
       </div>
     </div>
-    <div class="row pt-1">
+    <div class="row pt-1 pb-2">
       <div class="col-md-4">
         <img class="img-fluid img-thumbnail" src="https://picsum.photos/200" alt="">
       </div>
@@ -209,7 +209,7 @@
       <tbody>
         <tr>                                  <!-- trは見出しセル -->
           <th scope="row" style="background-color: silver">かわもとサポートセンターHP</th>
-          <td style colspan="3">リンク先</td>
+          <td style colspan="3"><a href="{{asset('office5')}}" class="btn btn-primary">HPリンク</a></td>
         </tr>
       </tbody>
     </table>

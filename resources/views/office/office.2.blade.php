@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
-  <title>Heaz&Time</title>
+  <title>kateisoudan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--stylesheet cssリンク-->
@@ -101,13 +101,13 @@
     </div>
     <div class="row">
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/1000/1000?grayscale" alt="">
       </div>
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano2.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/1000/1000?grayscale" alt="">
       </div>
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano3.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/1000/1000?grayscale" alt="">
       </div>
     </div>
 
