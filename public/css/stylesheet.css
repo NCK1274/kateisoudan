@@ -1,0 +1,238 @@
+@charset "utf-8";
+/*----------------- header -----------------*/header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+header .header-top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1330px;
+  width: 100%;
+  height: 60px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px 0 10px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+}
+header .header-log img {
+  width: 170px;
+  height: 64px;
+  vertical-align: top;
+}
+header .header-nav {
+  display: flex;
+  padding: 0;
+  transition: 0.7s;
+  margin: 0 13px;
+}
+header .header-list {
+  padding: 0;
+  margin: 13px;
+  transition: 0.7s;
+}
+.header-item {
+  margin-left: 0;
+  margin: 0 8px;
+  display: inline-flex;
+  position: relative;
+}
+.header-item a {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  height: 50px;
+  width: 120px;
+  color: #0550bf;
+  max-width: 320px;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  list-style: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-color: #0550bf;
+  background-color: #fff;
+  font-weight: bold;
+  line-height: 1.2857;
+  text-align: center;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+.header-item a:hover {
+  color: #15a3c5;
+}
+/* -------------------- page -------------------- */.page_top {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #ef3f98;
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 3;
+}
+.page_top a {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+.page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.page_top a::after {
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+/* -------------------- btn気になる -------------------- */.star {
+  position: relative;
+  height: 50px;
+  width: 120px;
+  color: #0550bf;
+  max-width: 320px;
+  margin: 0 10px 0 auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  background-color: blue;
+  font-weight: bold;
+  line-height: 1.2857;
+  text-align: center;
+  border-radius: 4px;
+  color: #333;
+  right: 0;
+  bottom: 0;
+}
+.star a {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 50px;
+  text-decoration: none;
+}
+.star a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f005';
+  font-size: 25px;
+  color: #ff0;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -8px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.star a::after {
+  content: 'お気に入り';
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  left: auto;
+  right: 10px;
+}
+/* -------------------- footer -------------------- */.footer {
+  height: auto;
+}
+.footer-txt {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  background-color: #d2e4ff;
+  align-content: center;
+  align-items: center;
+}
+.footer-log {
+  width: 140px;
+  margin: 0;
+  line-height: 1;
+}
+.footer-log img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.footer-nav {
+  display: flex;
+  float: right;
+  margin: 50px 0 0 30px;
+  list-style: none;
+}
+.footer-list {
+  display: flex;
+  padding: 0;
+  transition: 0.7s;
+}
+.footer-low {
+  position: relative;
+  display: inline-flex;
+  font-size: 10px;
+  width: 120px;
+  height: 30px;
+  margin: auto 10px;
+  letter-spacing: 0em;
+  list-style: none;
+  border: 3px solid #90cdeb;
+  background-color: #fff;
+}
+/* -------------------- copyright -------------------- */.copyright {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  padding: 5px 0 5px 0;
+  background: #065fe3;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}

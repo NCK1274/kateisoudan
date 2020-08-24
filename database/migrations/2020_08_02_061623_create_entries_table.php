@@ -18,7 +18,7 @@ class CreateEntriesTable extends Migration
             $table->string('name');
             $table->string('tel');
             $table->string('email');
-            $table->string('erea');
+            $table->string('area');
             $table->string('age');
             $table->string('type');
             $table->string('image');

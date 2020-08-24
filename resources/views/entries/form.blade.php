@@ -65,18 +65,18 @@
                         </div>
                     </div>
  <!-- エリアの項目欄 -->
-                    <div class="form-group{{ $errors->has('erea') ? ' has-error' : '' }}">
-                        {!! Form::label('erea', '対象者:', ['class' => 'col-sm-2 control-label']) !!}
+                    <div class="form-group{{ $errors->has('area') ? ' has-error' : '' }}">
+                        {!! Form::label('area', '対象者:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
-                            @foreach($ereas as $key => $value)
+                            @foreach($areas as $key => $value)
                                 <label class="checkbox-inline">
-                                    {!! Form::radio('erea', $value) !!}
+                                    {!! Form::radio('area', $value) !!}
                                     {{ $value }}
                                 </label>
                             @endforeach
-                            @if ($errors->has('erea'))
+                            @if ($errors->has('area'))
                                 <span class="help-block">
-                            <strong>{{ $errors->first('erea') }}</strong>
+                            <strong>{{ $errors->first('area') }}</strong>
                         </span>
                             @endif
                         </div>

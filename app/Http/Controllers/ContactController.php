@@ -14,10 +14,7 @@ class ContactsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        // $titles = Contact::$titles;
-        // $tels = Contact::$tels;
-        // $emails = Contact::$emails;        
+    {       
         
         return view('contacts.index');      
        

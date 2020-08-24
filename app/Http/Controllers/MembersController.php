@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;// 名前空間
 
+use Illuminate\Http\Request;
 use App\Http\Requests\MemberRequest;
 use App\Http\Controllers\Controller;
 use App\Member;
@@ -21,24 +22,24 @@ class MembersController extends Controller
         $ages = Member::$ages;
         $types = Member::$types;        
         
-        return view('members.member',compact('persons','genders','ages','types'));
+        return view('members.member',compact('persons','genders','ages','types'));      //resources/members/member.bladeにcompactの値を受け渡す
 
-    //
     }
     public function confirm(MemberRequest $request)
     {
         $member = new Member($request->all());                        //Member(モデル)のインスタンス化するApp\Http\Requestsの中身を全て取得する
 
+
         $type = '';
         if (isset($request->type)) {                                   //isset関数は値が入ってるかチェックする
-            $type = implode(',',$request->type);                       //implodeは指定した文字　,　を間に入れる事ができる
+            $type = implode(',',$request->type);                       //implodeは指定した文字　,　を配列された文を区切る事で間に入れる事ができる
         }
 
         return view('members.confirm',compact('member','type'));
     }
 
     // 保存
-    public function complete(MemberRequest $request)
+    public function complete(Request $request)
     {
         $input = $request->except('action');
              

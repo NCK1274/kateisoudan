@@ -5,6 +5,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <title>@yield('title')</title>
         <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+        <!-- bootstrap-datepickerを読み込む -->
+        <link rel="stylesheet" type="text/css" href="../bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.min.css">
+        <script type="text/javascript" src="../bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="../bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ja.min.js"></script>
     </head>
     <body>
         <div class="container">

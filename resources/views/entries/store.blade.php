@@ -1,4 +1,4 @@
-@extends('layouts.app'')
+@extends('layouts.app')
 
 @section('content')
 
@@ -12,22 +12,27 @@
 
                     <!-- table -->
                     <table class="table table-striped">
-                        <tr><td>代表者氏名</td><td>{{$inputs["name"]}}</tr>
-                        <tr><td>電話番号</td><td>{{$inputs["tel"]}}</tr>
-                        <tr><td>E-Mail</td><td>{{$inputs["email"]}}</tr>
-                        <tr><td>エリア</td><td>{{$inputs["area"]}}</tr>
-                        <tr><td>対象年齢</td><td>{{$inputs["age"]}}</tr>
-                        <tr><td>相談受付内容</td><td>{{$inputs["type"]}}</tr>
-                        <tr><td>一言</td><td>{{$inputs["body"]}}</tr>
-                        <tr><td>画像ファイル</td><td>{{$inputs["image"]}}</tr>
-                        <tr><td>HPリンク</td><td>{{$inputs["hp"]}}</tr>
+                        <tr><td>代表者氏名</td><td>{{$entry["name"]}}</tr>
+                        <tr><td>電話番号</td><td>
+                        {{$entry["tel"]}}</tr>
+                        <tr><td>E-Mail</td><td>{{$entry["email"]}}</tr>
+                        <tr><td>エリア</td><td>
+                        {{$entry["area"]}}</tr>
+                        <tr><td>対象年齢</td><td>
+                        {{$entry["age"]}}</tr>
+                        <tr><td>相談受付内容</td><td>{{$entry["type"]}}</tr>
+                        <tr><td>一言</td><td>
+                        {{$entry["body"]}}</tr>
+                        <tr><td>画像ファイル</td><td>{{$entry["image"]}}</tr>
+                        <tr><td>HPリンク</td><td>
+                        {{$entry["hp"]}}</tr>
                     </table>
 
-                    {!! Form::open(['url' => 'contact/complete',
+                    {!! Form::open(['url' => 'entry/complete',
                                                     'class' => 'form-horizontal',
                                                     'id' => 'post-input']) !!}
                  
-                @foreach($contact->getAttributes() as $key => $value)
+                @foreach($entry->getAttributes() as $key => $value)               <!-- getAttributes属性値の取得 -->
                         @if(isset($value))
                             @if(is_array($value))
                                 @foreach($value as $subValue)
