@@ -32,7 +32,7 @@ class EntriesController extends Controller
         //
         return view('entries.store',compact('entry'));
     }
-    public function complete(Request $request)
+    public function complete(EntryRequest $request)
     {
         // var_dump($_POST);
         // exit;

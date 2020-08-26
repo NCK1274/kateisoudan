@@ -12,7 +12,13 @@ body {
   background-color: #fff;
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+}
 @media only screen and (min-width:651px) {
   html {
     font-size: 71.4286%;
@@ -23,163 +29,21 @@ body {
   html {
     font-size: 75.8929%;
   }
-// }
-// .sp-nav {
-//   display: none;
-// }
-
-// @media screen and (max-width: 640px) {
-//   .header-nav {
-//     display: none;
-//   }
-
-//   .sp-nav {
-//     z-index: 1;
-
-//     /*前面に出す*/
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100vh;
-//     display: block;
-//     width: 100%;
-//     background: rgba(0, 0, 0, 0.8);
-//     opacity: 0;
-//     transform: translateY(-100%);
-//     transition: all .2s ease-in-out;
-
-//     /*closeを押した時に表示、非表示にする*/
-//   }
-
-  
-// //   // /* -------------------- ハンバーガーメニュー -------------------- */
-
-//   #hamburger {
-//     position: relative;
-
-//     /*ハンバーガーメニューのボックスを基準にする*/
-//     display: block;
-//     width: 30px;
-//     height: 25px;
-//     margin: 0 0 0 auto;
-
-//     span {
-//       position: absolute;
-
-//       /*ハンバーガーメニューの線の位置を決める記述*/
-//       top: 50%;
-
-//       /*上から丁度半分*/
-//       left: 0;
-//       display: block;
-//       width: 100%;
-//       height: 2px;
-//       background-color: #fff;
-//       transform: translateY(-50%);
-//     }
-
-//     &::before {
-//       content: '';
-
-//       /*ハンバーガーメニューの線自体を記述、上の線*/
-//       display: block;
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 2px;
-//       background-color: #fff;
-//     }
-
-//     &::after {
-//       content: '';
-
-//       /*ハンバーガーメニューの線自体を記述、下の線*/
-//       display: block;
-//       position: absolute;
-//       bottom: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 2px;
-//       background-color: #fff;
-//     }
-//   }
-
-//   /* -------------------- スマホメニュー -------------------- */
-
-//   .sp-nav {
-//     ul {
-//       padding: 0;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//       height: 100%;
-//     }
-
-//     li {
-//       margin: 0;
-//       padding: 0;
-
-//       span {
-//         font-size: 15px;
-//         color: #fff;
-//       }
-
-//       a, span {
-//         display: block;
-//         padding: 20px 0;
-//       }
-//     }
-
-//     .close {
-//       position: relative;
-//       padding-left: 20px;
-
-//       &::before {
-//         content: '';
-//         position: absolute;
-//         top: 50%;
-//         left: 0;
-//         display: block;
-//         width: 16px;
-//         height: 1px;
-//         background: #fff;
-//         transform: rotate(45deg);
-
-//         /*バツの線*/
-//       }
-
-//       &::after {
-//         content: '';
-//         position: absolute;
-//         top: 50%;
-//         left: 0;
-//         display: block;
-//         width: 16px;
-//         height: 1px;
-//         background: #fff;
-//         transform: rotate(-45deg);
-//       }
-//     }
-//   }
-//   /*-閉じるアイコンー*/
-
-//   .toggle {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
 }
+.sp-nav {
+  display: none;
+}
+
 /*----------------- header -----------------*/
 
 header {
   position: fixed;
   z-index: 100;
+  opacity: 0.8;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 20px;
+  padding: 15px 0;
   background-color: #fff;
 
   .header-top {
@@ -209,7 +73,7 @@ header {
     display: flex;
     padding: 0;
     transition: 0.7s;
-    margin: 0 13px;
+    margin: 0;
   }
 
   .header-list {
@@ -344,11 +208,12 @@ header {
   }
 
   .main-item_btn {
-    height: 4vw;
-    font-size: 1.2vw;
+    height: 60px;
+    font-size: 20px;
     line-height: 1.2;
-    padding-right: 2vw;
-    padding-left: 2.5vw;
+    margin-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
     border-color: #0550bf;
     background-color: #0550bf;
     color: white;
@@ -593,7 +458,7 @@ a {
 
 /* -------------------- info事業案内 -------------------- */
 
-.info {
+#info {
   position: relative;
   padding: 0;
   font-family:  YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
@@ -661,7 +526,7 @@ a {
 
 /* -------------------- cons相談内容 -------------------- */
 
-.cons {
+#cons {
   position: relative;
   font-family:  YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   font-size: 1.5vw;
@@ -699,7 +564,7 @@ a {
 
 /* -------------------- service -------------------- */
 
-.service {
+#service {
   width: 100%;
   margin: auto;
   padding: 70px 0;
@@ -741,6 +606,7 @@ a {
 
 .grid {
   display: grid;
+  width: 100%;
   justify-content: center;
   grid-template-rows: 60px 200px 300px;
   grid-template-columns: 200px 150px 200px 150px 200px;
@@ -935,7 +801,7 @@ img {
 
 /* -------------------- office -------------------- */
 
-.office {
+#office {
   padding: 50px 0 50px;
   width: 100%;
   box-sizing: border-box;

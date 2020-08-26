@@ -37,7 +37,8 @@
     </head>
 
 <body>
-    <!-- <div class="container">   -->
+    <div id="wrapper">
+
         <script>
                 $(function() {
                   const hum = $('#hamburger, .close')
@@ -53,27 +54,13 @@
                 <h1 class="header-log">
                   <a><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}"></a>
                 </h1>
-                <nav class="header-nav">
+                <div class="header-nav">
                     <ul class="header-list">
                       <li class="header-item"><a href="#">事業所一覧</a></li>
                       <li class="header-item"><a href="#">新規登録フォーム</a></li>
                       <li class="header-item"><a href="#">ログイン</a></li>
                     </ul>
-                </nav>
-                <!--レスポンシブヘッダーハンバーガー部分の実装-->
-                 <div id="hamburger">
-                    <span></span>
                 </div>
-                <nav class="sp-nav">
-                    <ul>
-                        <li><a href="#">事業所一覧</a></li>
-                        <li><a href="#">新規登録フォーム</a></li>
-                        <li><a href="#">ログイン</a></li>
-                        <li class="close"><span>閉じる</span></li>
-                    </ul>
-                </nav>
-                <!--ハンバーガーメニューの表示の関数-->
-      
             </div>
         </header>
     
@@ -84,6 +71,15 @@
                     auto: true,
                     pause: 4000,
                 });
+            });
+            $(document).ready(function() {          //HTMLを読み込んだら処理
+              $(window).scroll(function() {         //windowがスクロールされた時の関数
+                if ($(this).scrollTop() > 0) {      //TOP出ない時
+                  $('header').css('opacity', 0.8);  //headerの透明度
+                } else {
+                  $('header').css('opacity', 1);    //TOPの時の透明度
+                }
+              });
             });
         </script>
 
@@ -101,7 +97,7 @@
                     <ul class="main-item_top">
                         <li>
                         <span>事業所はこちらからお探しください</span>
-                        <a href="#" class="main-item_btn">事業所一覧</a> 
+                        <a href="office" class="main-item_btn">事業所一覧</a> 
                         </li>
                     </ul>    
                 </div>  
@@ -112,11 +108,11 @@
         <nav class="navigation">
             <div class="navigation-inner">
                 <ul>
-                    <li class="menu1"><a href="#"><span>事業案内</span></a></li>
-                    <li class="menu2"><a href="#"><span>相談内容</span></a></li>
-                    <li class="menu3"><a href="#"><span>サービス利用方法</span></a></li>
-                    <li class="menu4"><a href="#"><span>事業所一覧</span></a></li>
-                    <li class="menu5"><a href="#"><span>お問合せ</span></a></li>
+                    <li class="menu1"><a href="#info"><span>事業案内</span></a></li>
+                    <li class="menu2"><a href="#cons"><span>相談内容</span></a></li>
+                    <li class="menu3"><a href="#service"><span>サービス利用方法</span></a></li>
+                    <li class="menu4"><a href="office"><span>事業所一覧</span></a></li>
+                    <li class="menu5"><a href="contact"><span>お問合せ</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -155,7 +151,7 @@
             <p><span class="news-btn"><a href="#">more</a></span></p>
         </div>    
     <!--事業案内-->            
-        <div class="info">
+        <div id="info">
             <img alt="info画像" src="{{asset('/img/info1.png')}}">
             <dl>
             <dt>事業案内</dt>
@@ -173,7 +169,7 @@
        </div>
 
         <!--相談内容-->
-        <div class="cons">
+        <div id="cons">
             <img alt="相談内容" src="{{asset('/img/info2.png')}}">
             <dl>
                 <dt>相談内容</dt>
@@ -190,7 +186,7 @@
         </div> 
 
         <!--サービス利用方法-->
-        <section class="service">
+        <section id="service">
             <div class="service-body">
                 <div class="service-txt">
                     <h2>サービス利用方法</h2>
@@ -285,7 +281,7 @@
         </script>
         
         <!--事業所の紹介-->
-        <section class="office">
+        <section id="service">
             <h1 class="office-title">
             事業所の紹介
             </h1>
@@ -315,9 +311,7 @@
         <div class="page_top">
             <a href="#"></a>
         </div>
-
     <!--メイン画面終了-->
-
     <!--フッターお問合せ -->
         <footer>
             <div class="footer-txt">
@@ -341,6 +335,6 @@
         <div class="copyright">
             <p>&copy; 2020 Katei Soudan Sitsu All Rights Reserved.</p>
         </div>
-    </div>       
+    </div>
 </body>
 </html>

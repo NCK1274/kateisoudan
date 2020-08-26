@@ -209,7 +209,7 @@
       <tbody>
         <tr>                                  <!-- trは見出しセル -->
           <th scope="row" style="background-color: silver">かわもとサポートセンターHP</th>
-          <td style colspan="3"><a href="{{asset('office5')}}" class="btn btn-primary">HPリンク</a></td>
+          <td style colspan="3"><a href="{{asset('office5_2')}}" class="btn btn-primary">HPリンク</a></td>
         </tr>
       </tbody>
     </table>

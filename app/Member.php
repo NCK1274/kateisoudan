@@ -8,7 +8,7 @@ class Member extends Model
 {
     //
     protected $fillable = [                                         //ホワイトリスト方式　fill + able = 代入可能
-    	'name','tel','email','body'                                 //フィールドの値を指定して、fill()でその値が代入される
+    	'name','tel','email','person','gender','age','type','body'                                 //フィールドの値を指定して、fill()でその値が代入される
     ];
     static $persons = [                                             //staticはクラスのメンバ（プロパティ・メソッド）静的変数 → インスタンス化の必要なしにアクセスできる、ただしstaticのプロパティは(static $persons)インスタンス化されたクラスからアクセスできない
     	'本人','本人以外'

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
-  <title>Heaz&Time</title>
+  <title>kateisoudan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--stylesheet cssリンク-->
-  <link rel="stylesheet" href="{{ asset('/css/stylesheet1.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/css/stylesheet4.css') }}" type="text/css">
 
    <!--bootstrap cssのリンク-->
   <link rel="stylesheet" href="{{asset('/css/bootstrap.css.map')}}">
@@ -50,7 +50,7 @@
     <!--ヘッダー部分の実装-->
   <header>
     <h1>
-        <a href="/">Headz&Time</a>
+        <a href="/">RIVERBOOK相談所</a>
     </h1>
       <!--PCヘッダー部分の実装-->
     <nav class="pc-nav">
@@ -79,35 +79,35 @@
 
     <!--トップ部分の実装-->
   <div class='top keyvisual'>
-    <h2>HEADZTIME HISTORY</h2>
+    <h2>RIVERBOOK相談所</h2>
     <!--メイン部分の実装-->
     <div class="top-logo">
-      <img class="logo" src="{{asset('/img/headz.png')}}">
+      <img class="logo" src="{{asset('/img/RiverBook.png')}}">
     </div>
   <!--human部分の実装-->
     <div class="human">
       <div id="men" class ="human-poster vegas-container img-responsive" style="padding: 0px;">
       </div>
       <div class="human-label animated">
-        <p>MEMBER</p>
+        <p>TEACHER</p>
       </div>
     </div>
   </div>  
   <!--introduction部分の実装-->
   <div class="container bg-white py-5 my-5">
-      <!--にこにこキャンプの特徴-->
+      <!--特徴-->
     <div id="column">
-      <h2 class="text-center py-3">Headz & Time</h2>
+      <h2 class="text-center py-3">RIVERBOOK相談所</h2>
     </div>
     <div class="row">
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/200" alt="">
       </div>
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano2.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/200" alt="">
       </div>
       <div class="col-md-4 col-12">
-        <img class="img-fluid" src="img/piano3.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/200" alt="">
       </div>
     </div>
 
@@ -123,12 +123,12 @@
         ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
       </div>
       <div class="col-md-6 col-12 p-0 align-self-center">
-        <img class="img-fluid" src="img/cinema.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/800" alt="">
       </div>
     </div>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="col-md-6 col-12 p-0 align-self-center">
-        <img class="img-fluid" src="img/cinema1.jpg" alt="">
+        <img class="img-fluid" src="https://picsum.photos/800" alt="">
       </div>
       <div class="col-md-6 col-12 p-0 align-self-center h3 p-4">
         ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
@@ -138,14 +138,14 @@
 
       <!--member-->
     <div id="card">
-      <h2 class="text-center py-3">MEMBER</h2>
+      <h2 class="text-center py-3">TEACHER</h2>
     </div>
     <div class="row">
       <div class="col-md-4 col-12">
         <div class="card">
-          <img src="img/human3.jpg" class="card-img-top" alt="...">
+          <img src="https://picsum.photos/200" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">KUNMMY</h5>
+            <h5 class="card-title">川本</h5>
               <p class="card-text">
                 テキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキスト
@@ -162,9 +162,9 @@
         </div>
         <div class="col-md-4 col-12">
           <div class="card">
-            <img src="img/human2.jpg" class="card-img-top" alt="...">
+            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">TaK</h5>
+              <h5 class="card-title">川本</h5>
               <p class="card-text">
                 テキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキスト
@@ -181,9 +181,9 @@
         </div>
         <div class="col-md-4 col-12">
           <div class="card">
-            <img src="img/human1.jpg" class="card-img-top" alt="...">
+            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">NCK</h5>
+              <h5 class="card-title">川本</h5>
               <p class="card-text">
                 テキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキスト
@@ -284,7 +284,7 @@
               <h4 class="d-inline-block py-3 border-bottom border-info text-dark">Profile</h4>
             </div>
             <div class="mx-5">
-              <img class="img-fluid rounded-circle" src="img/gang.jpg" alt="">
+              <img class="img-fluid rounded-circle" src="https://picsum.photos/200" alt="">
             </div>
             <p>
               テキストテキストテキストテキストテキストテキスト。
@@ -307,11 +307,11 @@
             <div class="py-4">
               <h4 class="d-inline-block py-3 border-bottom border-info text-dark">Product</h4>
             </div>
-            <a class="twitter-timeline text-dark" data-lang="ja" data-height="500" href="＃">Tweets by heaztime</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>          </div>
+            <a class="twitter-timeline text-dark" data-lang="ja" data-height="500" href="＃">Tweets by riverbook</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>          </div>
         </div>
       </div>
       <div class="copylight">
-      &copy; 2020 Katei Soudan Sitsu All Rights Reserved.
+      &copy; 2020 River Book All Rights Reserved.
       </div>
   </footer>
 </body>

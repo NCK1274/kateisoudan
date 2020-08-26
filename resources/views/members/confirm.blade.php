@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <th>相談内容</th>
-                            <td>{{ $type }}</td>
+                            <td>{{ $types }}</td>
                         </tr>
                         <tr>
                             <th>具体的詳細</th>

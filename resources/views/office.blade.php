@@ -56,7 +56,7 @@
       <h2 class="text-center py-3">事業所一覧</h2>
     </div>
     <!-- 事業所 -->
-    <div class="card mb-3 " >
+    <div class="card my-5 " >
       <div class="row no-gutters">
         <div class="col-md-4 px-2 py-2">
           <div class="card" style="width: 100%;">
@@ -80,14 +80,14 @@
             <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
             <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
             <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
-            <a href="office1" class="btn btn-primary">詳細を見る</a>
+            <a href="office5_1" class="btn btn-primary">詳細を見る</a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 事業所 -->
-    <div class="card mb-3 " >
+    <div class="card my-5" >
       <div class="row no-gutters">
         <div class="col-md-4 px-2 py-2">
           <div class="card" style="width: 100%;">
@@ -111,14 +111,14 @@
             <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
             <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
             <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
-            <a href="office1" class="btn btn-primary">詳細を見る</a>
+            <a href="office4_1" class="btn btn-primary">詳細を見る</a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 事業所 -->
-    <div class="card mb-3 " >
+    <div class="card my-5 " >
       <div class="row no-gutters">
         <div class="col-md-4 px-2 py-2">
           <div class="card" style="width: 100%;">
@@ -142,7 +142,7 @@
             <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
             <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
             <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
-            <a href="office1" class="btn btn-primary">詳細を見る</a>
+            <a href="office5_1" class="btn btn-primary">詳細を見る</a>
           </div>
         </div>
       </div>
