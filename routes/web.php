@@ -11,10 +11,10 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-*/
+// Route::get('welcome', function () {
+//     return view('welcome');
+// });
+
 Route::get('/',function(){
 	return view('home');
 });
@@ -50,6 +50,18 @@ Route::get('entry', 'EntriesController@form');
 Route::post('entry', 'EntriesController@form');
 Route::post('entry/store', 'EntriesController@store');
 Route::post('entry/complete', 'EntriesController@complete');
+Auth::routes();
+
+Route::resource('products', 'ProductController');
+  Auth::routes(['verify' => true]);
+
+// 会社概要
+Route::get('index',function(){
+	return view('company/index');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

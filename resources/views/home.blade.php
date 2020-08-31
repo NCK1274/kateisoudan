@@ -56,9 +56,33 @@
                 </h1>
                 <div class="header-nav">
                     <ul class="header-list">
-                      <li class="header-item"><a href="#">事業所一覧</a></li>
-                      <li class="header-item"><a href="#">新規登録フォーム</a></li>
-                      <li class="header-item"><a href="#">ログイン</a></li>
+                      <li class="header-item"><a href="office">事業所一覧</a></li>
+                      @guest
+                            <li class="header-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="header-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('ログアウト') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
@@ -162,7 +186,7 @@
                     いじめ、薬物、自殺志向、非行・不登校などの改善の為に、全国各地から少年少女を預かり先の提供することで、<br>私たちKSSがその架け橋となれる事を目指しております。<br>
                     支援地域密着型全国の同じ悩みを抱えた親御さんを支援できる受け入れ態勢を整えております。<br>
                     <p class="info-logo">
-                    <a href="#"><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">もっと詳しく</a>
+                    <a href="office"><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">もっと詳しく</a>
                     </p>
                 </dd>
             </dl>
@@ -294,14 +318,14 @@
                 <li><a href="#"><img src="{{asset('/img/office3.png')}}" alt="office3"></a></li>
             </ul>
             <li class="office-btn">
-            <a href="#">事業者一覧はこちらへ</a>
+            <a href="office">事業者一覧はこちらへ</a>
             </li>
         </section>
 
         <!--事業者エントリーフォーム-->
         <section class="entry">
             <figure class="entry-box" >
-                <a href="#">
+                <a href="entry">
                 <img alt="事業者の写真" src="{{asset('/img/entry.png')}}">
                </a>
             </figure>
@@ -324,10 +348,10 @@
                 </div>  
                 <div class="footer-nav">
                     <ul class="footer-list">
-                        <li class="footer-low"><a href="#">会社概要</a></li>
+                        <li class="footer-low"><a href="index">会社概要</a></li>
                         <li class="footer-low"><a href="#">利用規約</a></li>
                         <li class="footer-low"><a href="#">プライバシーポリシー</a></li> 
-                        <li class="footer-low"><a href="#">お問合せ</a></li>
+                        <li class="footer-low"><a href="contact">お問合せ</a></li>
                     </ul>
                 </div>
             </div>    

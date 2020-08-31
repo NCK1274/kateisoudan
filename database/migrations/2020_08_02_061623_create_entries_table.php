@@ -14,7 +14,7 @@ class CreateEntriesTable extends Migration
     public function up()
     {
         Schema::create('entries', function (Blueprint $table) {
-            $table->bsigIncrements('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('tel');
             $table->string('email');
