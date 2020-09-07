@@ -18,6 +18,7 @@
 Route::get('/',function(){
 	return view('home');
 });
+
 // 事業所一覧
 Route::get('office',function(){
 	return view('office');
@@ -52,6 +53,8 @@ Route::post('entry/store', 'EntriesController@store');
 Route::post('entry/complete', 'EntriesController@complete');
 Auth::routes();
 
+// 事業所一覧
+Route::get('products/{product}/favorite', 'ProductController@favorite')->name('products.favorite');
 Route::resource('products', 'ProductController');
   Auth::routes(['verify' => true]);
 
@@ -59,6 +62,19 @@ Route::resource('products', 'ProductController');
 Route::get('index',function(){
 	return view('company/index');
 });
+
+// ユーザーからホスト先へのコンタクト
+Route::get('offer/', 'OffersController@index');
+Route::post('offer/confirm', 'OffersController@confirm');
+Route::post('offer/complete', 'OffersController@complete');
+
+// マイページ
+Route::get('users/mypage', 'UserController@mypage')->name('mypage');
+Route::get('users/mypage/edit', 'UserController@edit')->name('mypage.edit');
+Route::get('users/mypage/address/edit', 'UserController@edit_address')->name('mypage.edit_address');
+Route::put('users/mypage', 'UserController@update')->name('mypage.update');
+Route::get('users/mypage/password/edit', 'UserController@edit_password')->name('mypage.edit_password');
+Route::put('users/mypage/password', 'UserController@update_password')->name('mypage.update_password');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

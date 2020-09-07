@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="ja" class="animated">
 <head>
@@ -33,21 +36,6 @@
   　<!-- TOPに戻る部分の実装-->
   <div class="page_top"><a href="#"></a></div>
 
-  <!--ヘッダー部分の実装-->
-  <header>
-    <div class="header-top">
-      <h1 class="header-log">
-        <a><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}"></a>
-      </h1>
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-item"><a href="#">事業所一覧</a></li>
-          <li class="header-item"><a href="#">新規登録フォーム</a></li>
-          <li class="header-item"><a href="#">ログイン</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
   <!--全体部分の実装-->
   <div class="container bg-light py-5 my-5">
 
@@ -75,30 +63,22 @@
           </div>
         </div> 
         <div class="col-md-8">
+            @foreach($products as $product)
           <div class="card-body">
-            <h2 class="card-title font-weight-bold">NPO法人かわもと学習サポートセンター
+            <h2 class="card-title font-weight-bold">{{$product->name}}
             </h2>
-            @if($product->isFavoritedBy(Auth::user()))
-                        <a href="/products/{{ $product->id }}/favorite" class="btn kateisoudan-favorite-button text-favorite w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り解除
-                        </a>
-                        @else
-                        <a href="/products/{{ $product->id }}/favorite" class="btn kateisoudan-favorite-button text-favorite w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り
-                        </a>
-                        @endif
-            <p class="card-text">初めまして、私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。私たちが学習サポートを行います。</p>
+            <p class="card-text">{{$product->body}}</p>
             <p class="card-text"><small class="text-muted">2020年8月24日　更新</small></p>
             <p class="card-text">一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント一言コメント</p>
-            <a href="office5_1" class="btn btn-primary">詳細を見る</a>
+            <a href="{{route('products.show', $product)}}" class="btn btn-primary">詳細を見る</a>
           </div>
+          @endforeach
         </div>
       </div>
     </div>
 
-    <!-- 事業所 -->
+
+    <!-- 事業所 編集なし　通常遷移のみ -->
     <div class="card my-5" >
       <div class="row no-gutters">
         <div class="col-md-4 px-2 py-2">
@@ -129,6 +109,7 @@
       </div>
     </div>
 
+
     <!-- 事業所 -->
     <div class="card my-5 " >
       <div class="row no-gutters">
@@ -160,7 +141,8 @@
       </div>
     </div>
 
-  </div>  
+  </div>
+  
 
    <!--フッターお問合せ -->
     <footer>
@@ -186,5 +168,4 @@
         <p>&copy; 2020 Katei Soudan Sitsu All Rights Reserved.</p>
     </div>
 </body>
-
-</html>
+@endsection

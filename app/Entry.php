@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entry extends Model
 {
+    public function products()
+    {
+        return $this->hasMauy('App\Product');
+        // 紐付け
+    }
 	protected $fillable = [                                         //ホワイトリスト方式　fill + able = 代入可能
     	'name','tel','email','area','age','type','image','hp','body'                                //フィールドの値を指定して、fill()でその値が代入される
     ];

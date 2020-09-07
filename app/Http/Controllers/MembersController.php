@@ -22,7 +22,7 @@ class MembersController extends Controller
         $ages = Member::$ages;
         $types = Member::$types;        
         
-        return view('members.member',compact('persons','genders','ages','types'));      //resources/members/member.bladeにcompactの値を受け渡す
+        return view('members.member',compact('persons','genders','ages','types'));      //第一引数のresources/members/ディレクトリ内のmember.bladeに第二引数のcompactの値を受け渡す
 
     }
     public function confirm(MemberRequest $request)

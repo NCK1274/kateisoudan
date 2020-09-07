@@ -146,3 +146,7 @@ label {
     letter-spacing: normal;
     color: #4169E1;
 }
+.user-edit-label {
+  cursor: pointer;
+  cursor: hand;
+}

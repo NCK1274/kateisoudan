@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
  
 @section('content')
  
@@ -7,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">お問い合わせ</div>
+                <div class="panel-heading font-weight-bold">お問い合わせ</div>
                 <div class="panel-body">
                     {{-- エラーの表示 --}}
                     @if ($errors->any())
@@ -36,7 +37,8 @@
                             @endif
                         </div>
                     </div>
-                    <!-- お名前の記入欄 --> 
+
+                    <!-- 件名の記入欄 --> 
                     <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                         {!! Form::label('title', '件名:', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
@@ -49,6 +51,7 @@
                             @endif
                         </div>
                     </div>
+
                     <!-- 電話番号の記入欄 --> 
                     <div class="form-group{{ $errors->has('tel') ? ' has-error' : '' }}">
                         {!! Form::label('tel', '電話番号:', ['class' => 'col-sm-2 control-label']) !!}
@@ -61,7 +64,8 @@
                                 </span>
                             @endif
                         </div>
-                    </div>                  
+                    </div>
+
                     <!-- メールアドレスの項目欄 --> 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                         {!! Form::label('email', 'メールアドレス:', ['class' => 'col-sm-2 control-label']) !!}
@@ -74,6 +78,7 @@
                             @endif
                         </div>
                     </div>
+                    
                     <!-- 内容の項目欄 --> 
                     <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
                         {!! Form::label('body', '内容:', ['class' => 'col-sm-2 control-label']) !!}

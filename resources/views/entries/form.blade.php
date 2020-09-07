@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1 style="margin-bottom:30px;"></h1>
+    <h1 style="margin-bottom:20px;"></h1>
 
     <!-- form -->
 
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">事業者エントリー</div>
+                <div class="panel-heading font-weight-bold-">事業者エントリー</div>
                 <div class="panel-body">
                     {{-- エラーの表示 --}}
                     @if ($errors->any())
@@ -167,4 +167,5 @@
         </div>
     </div>
 </div>
+@endsection
     
