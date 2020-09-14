@@ -6,41 +6,103 @@
 
     <form method="POST" action="/products">
         {{ csrf_field() }}
+
+        <!-- 企業名記入欄 -->
         <div class="form-group">
             <label for="product-name">企業名</label>
             <input type="text" name="name" id="product-name" class="form-control">
         </div>
+
+        <!-- 電話番号記入欄 -->
         <div class="form-group">
             <label for="product-tel">電話番号</label>
             <input type="text" name="tel" id="product-tel" class="form-control">
         </div>
+
+        <!-- メールアドレス記入欄 -->
         <div class="form-group">
             <label for="product-email">メールアドレス</label>
-            <input type="text" name="email" id="product-email" class="form-control">
+            <input type="email" name="email" id="product-email" class="form-control">
         </div>
+
+        <!-- 地域項目欄 -->
         <div class="form-group">
             <label for="product-area">エリア</label>
-            <input type="text" name="area" id="product-area" class="form-control">
+            @foreach($areas as $key => $value)
+                <label class="checkbox-inline">
+                    {!! Form::radio('area', $value) !!}
+                    {{ $value }}
+                </label>
+            @endforeach
         </div>
+
+        <!-- 対処年齢の項目欄 -->
         <div class="form-group">
             <label for="product-age">対象年齢</label>
-            <input type="text" name="age" id="product-age" class="form-control">
+            @foreach($ages as $key => $value)
+                <label class="checkbox-inline">
+                    {!! Form::radio('age', $value) !!}                            
+                    {{$value }}
+                </label>
+            @endforeach
+                        
         </div>
+
+        <!-- 相談内容の項目欄 -->
         <div class="form-group">
             <label for="product-body">相談内容</label>
-            <input type="number" name="body" id="product-body" class="form-control">
+            @foreach($types as $key => $value)
+                <label class="checkbox-inline">
+                    {!! Form::radio('type', $value) !!}
+                    {{ $value }}
+                </label>
+            @endforeach
         </div>
+
+        <!-- 一言コメント項目 -->
         <div class="form-group">
             <label for="product-text">コメント</label>
             <textarea name="text" id="product-text" class="form-control"></textarea>
         </div>
+
+        <!-- HPの添付 -->
         <div class="form-group">
             <label for="product-hp">HP</label>
-            <input type="text" name="hp" id="product-hp" class="form-control">
+            <input type="url" name="url" id="product-url" class="form-control">   
+        </div>
+
+        <!-- 画像添付 -->
+        <div class="form-group">
+            <label for="product-image">画像</label>
+            <form action="cgi-bin/abc.cgi" method="post" enctype="multipart/form-data">
+                <p>
+                <input type="file" name="datafile">
+                </p>
+            </form>
         </div>
         <div class="form-group">
             <label for="product-image">画像</label>
-            <input type="text" name="image" id="product-image" class="form-control">
+            <form action="cgi-bin/abc.cgi" method="post" enctype="multipart/form-data">
+                <p>
+                <input type="file" name="datafile">
+                </p>
+            </form>
+        </div>
+        <div class="form-group">
+            <label for="product-image">画像</label>
+            <form action="cgi-bin/abc.cgi" method="post" enctype="multipart/form-data">
+                <p>
+                <input type="file" name="datafile">
+                </p>
+            </form>
+        </div>
+        <div class="form-group">
+            <label for="product-image">画像</label>
+            <form action="cgi-bin/abc.cgi" method="post" enctype="multipart/form-data">
+                <p>
+                <input type="file" name="datafile">
+                </p>
+            </form>
         </div>
         <button type="submit" class="btn btn-success">事業所を登録</button>
     </form>

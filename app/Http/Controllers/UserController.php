@@ -16,26 +16,16 @@ class UserController extends Controller
         return view('users.mypage', compact('user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
     public function edit(User $user)
     {
+
         $user = Auth::user();
 
         return view('users.edit', compact('user'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
+    
+    
     public function update(Request $request, User $user)
     {
         $user = Auth::user();
@@ -56,7 +46,8 @@ class UserController extends Controller
         return view('users.edit_address', compact('user'));
     }
 
-    // public function edit_password()     パスワード変更画面でpasswordとconfirm_paswordが同じものか確認
+    public function edit_password()
+    //パスワード変更画面でpasswordとconfirm_paswordが同じものか確認
     {
         return view('users.edit_password');
     }

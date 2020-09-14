@@ -9,8 +9,12 @@ class Entry extends Model
     public function products()
     {
         return $this->hasMauy('App\Product');
-        // 紐付け
+        //紐付け
     }
+    // public function gettel(){
+    //     $data = DB::table($this->table)->get('tel');
+    //     内部結合、外部結合
+    // }
 	protected $fillable = [                                         //ホワイトリスト方式　fill + able = 代入可能
     	'name','tel','email','area','age','type','image','hp','body'                                //フィールドの値を指定して、fill()でその値が代入される
     ];

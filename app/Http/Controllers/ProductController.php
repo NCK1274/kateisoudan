@@ -11,7 +11,9 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::all();
+        $products = Entry::all();
+
+
 
         return view('products.index',compact('products'));
     }
@@ -31,9 +33,12 @@ class ProductController extends Controller
 
     public function create()
     {
-        $entries = Entry::all();
 
-        return view('products.create', compact('entries'));
+        $areas = Entry::$areas;
+        $ages = Entry::$ages;
+        $types = Entry::$types;        
+        
+        return view('products.create',compact('areas','ages','types'));
     }
 
 

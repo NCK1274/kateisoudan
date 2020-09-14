@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5">
@@ -10,7 +11,7 @@
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf
-
+<!-- 名前記入欄 -->
                 <div class="form-group row">
                     <label for="name" class="col-md-5 col-form-label text-md-left">氏名<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
@@ -25,6 +26,7 @@
                     </div>
                 </div>
 
+<!-- メールアドレス記入欄 -->
                 <div class="form-group row">
                     <label for="email" class="col-md-5 col-form-label text-md-left">メールアドレス<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
@@ -39,22 +41,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="password" class="col-md-5 col-form-label text-md-left">郵便番号<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('postal_code') is-invalid @enderror kateisoudan-login-input" name="postal_code" required placeholder="000-0000">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="password" class="col-md-5 col-form-label text-md-left">住所<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('address') is-invalid @enderror kateisoudan-login-input" name="address" required placeholder="神奈川県横浜市鶴見区1-2-1">
-                    </div>
-                </div>
-
+<!-- 電話番号記入欄 -->
                 <div class="form-group row">
                     <label for="password" class="col-md-5 col-form-label text-md-left">電話番号<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
@@ -63,6 +50,7 @@
                     </div>
                 </div>
 
+<!-- パスワード記入欄 -->
                 <div class="form-group row">
                     <label for="password" class="col-md-5 col-form-label text-md-left">パスワード<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 

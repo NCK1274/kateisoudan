@@ -34,12 +34,12 @@
             <div class="d-flex justify-content-between">
                 <div class="row">
                     <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-archive fa-3x"></i>
+                        <i class="fas fa-comments fa-3x"></i>
                     </div>
                     <div class="col-9 d-flex align-items-center ml-2 mt-3">
                         <div class="d-flex flex-column">
-                            <label for="user-name">注文履歴</label>
-                            <p>注文履歴を確認できます</p>
+                            <label for="user-name">コンタクト履歴</label>
+                            <p>企業の履歴を確認できます</p>
                         </div>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
             <div class="d-flex justify-content-between">
                 <div class="row">
                     <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-map-marked fa-3x"></i>
+                        <i class="fas fa-map-marked-alt fa-3x"></i>
                     </div>
                     <div class="col-9 d-flex align-items-center ml-3 mt-3">
                         <div class="d-flex flex-column">
-                            <label for="user-name">お届け先の変更</label>
+                            <label for="user-name">お客様の住所変更</label>
                             <p>登録住所の変更</p>
                         </div>
                     </div>
@@ -75,27 +75,6 @@
         </div>
 
         <hr>
-
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="row">
-                    <div class="col-2 d-flex align-items-center">
-                        <i class="fas fa-lock fa-3x"></i>
-                    </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
-                        <div class="d-flex flex-column">
-                            <label for="user-name">パスワード変更</label>
-                            <p>パスワードを変更します</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a href="{{ route('mypage.edit_password') }}">
-                        <i class="fas fa-chevron-right fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
 
         <div class="container">
             <div class="d-flex justify-content-between">
