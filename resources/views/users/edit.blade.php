@@ -23,7 +23,8 @@
                         </span>
                     </div>
                     <div class="collapse show userName">
-                        <h1 class="kateisoudan-edit-user-info-value">{{ $user->name }}</h1>
+                        <h1 class="kateisoudan-edit-user-info-value">{{ $user->name}}</h1>
+
                     </div>
                     <div class="collapse editUserName">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">

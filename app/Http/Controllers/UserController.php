@@ -13,13 +13,17 @@ class UserController extends Controller
     {
         $user = Auth::user();
 
+
         return view('users.mypage', compact('user'));
     }
 
     public function edit(User $user)
     {
+        
 
         $user = Auth::user();
+        //Auth::ファザード　ログイン、ログアウトのユーザー情報認証
+        
 
         return view('users.edit', compact('user'));
     }

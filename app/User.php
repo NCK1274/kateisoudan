@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticatable; //エイリアスを生成
 use App\Notifications\CustomVerifyEmail;
 use App\Notifications\CustomResetPassword;
 use Overtrue\LaravelFavorite\Traits\Favoriter;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable, Favoriter;
+    use Notifiable, Favoriter;                                              //Notifiable通知
 
     public function sendEmailVerificationNotification()
      {
@@ -26,20 +26,12 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password', 'postal_code', 'address', 'phone'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+    
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
