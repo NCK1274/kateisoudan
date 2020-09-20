@@ -19,7 +19,7 @@
                     <label for="name" class="col-md-5 col-form-label text-md-left">氏名<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror kateisoudan-login-input" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror kateisoudan-login-input" name="name" value="" required autocomplete="name" autofocus placeholder="氏名">
 
                         @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                     <label for="password" class="col-md-5 col-form-label text-md-left">郵便番号<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input type="text" class="form-control @error('postal_code') is-invalid @enderror kateisoudan-login-input" name="postal_code" value="{{ $user->postal_code }}" required placeholder="150-0043">
+                        <input type="text" class="form-control @error('postal_code') is-invalid @enderror kateisoudan-login-input" name="postal_code" value="{{ $user->postal_code }}" required placeholder="000-0000">
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@
                     <label for="password" class="col-md-5 col-form-label text-md-left">住所<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input type="text" class="form-control @error('address') is-invalid @enderror kateisoudan-login-input" name="address" value="{{ $user->address }}" required placeholder="東京都渋谷区道玄坂２丁目１１−１">
+                        <input type="text" class="form-control @error('address') is-invalid @enderror kateisoudan-login-input" name="address" value="{{ $user->address }}" required placeholder="神奈川県横浜市鶴見区1ー1ー1">
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                     <label for="password" class="col-md-5 col-form-label text-md-left">電話番号<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input type="text" class="form-control @error('phone') is-invalid @enderror kateisoudan-login-input" name="phone" value="{{ $user->phone }}" required placeholder="03-5790-9039">
+                        <input type="text" class="form-control @error('phone') is-invalid @enderror kateisoudan-login-input" name="phone" value="{{ $user->phone }}" required placeholder="xx-xxxx-xxxx">
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
                     <label for="email" class="col-md-5 col-form-label text-md-left">メールアドレス<span class="ml-1 kateisoudan-require-input-label"><span class="kateisoudan-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror kateisoudan-login-input" name="email" value="{{ $user->email }}" required autocomplete="email" placeholder="samurai@samurai.com">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror kateisoudan-login-input" name="email" value="{{ $user->email }}" required autocomplete="email" placeholder="kateisoudan@kateisoudan.com">
 
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -78,5 +78,18 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    let switchEditUserInfo = (textClass, inputClass, labelClass) => {
+        if ($(textClass).css('display') == 'block') {
+            $(labelClass).text("キャンセル");
+            $(textClass).collapse('hide');
+            $(inputClass).collapse('show');
+        } else {
+            $(labelClass).text("編集");
+            $(textClass).collapse('show');
+            $(inputClass).collapse('hide');
+        }
+    }
+    </script>
 
 @endsection

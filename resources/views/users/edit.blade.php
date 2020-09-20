@@ -27,7 +27,7 @@
 
                     </div>
                     <div class="collapse editUserName">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="氏名">
 
                         <button type="submit" class="btn kateisoudan-submit-button mt-3 w-25">
                             保存
@@ -54,7 +54,7 @@
                         <h1 class="kateisoudan-edit-user-info-value">{{ $user->email }}</h1>
                     </div>
                     <div class="collapse editUserMail">
-                        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" autofocus placeholder="samurai@samurai.com">
+                        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" autofocus placeholder="kateisoudan@soudan.com">
 
                         <button type="submit" class="btn kateisoudan-submit-button mt-3 w-25">
                             保存

@@ -10,7 +10,6 @@ class Product extends Model
     // use Favoriteable;
     public function entry()
     {
-
     	return $this->belongTo('App\Entry');
     }
 }

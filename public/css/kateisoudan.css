@@ -150,3 +150,7 @@ label {
   cursor: pointer;
   cursor: hand;
 }
+.kateisoudan-favorite-add-cart {
+    border-radius: 2px;
+    background-color: #0fbe9f;
+}

@@ -26,6 +26,7 @@
                 <a class="nav-link" href="{{ route('login') }}"><label>ログイン</label></a>
             </li>
             <hr>
+            <!-- お気に入り -->
             <li class="nav-item mr-5">
                 <a class="nav-link" href="{{ route('login') }}"><i class="far fa-star"></i></a>
             </li>
@@ -33,6 +34,11 @@
             <li class="nav-item mr-5">
                 <a class="nav-link" href="{{ route('mypage') }}">
                     <i class="fas fa-user mr-1"></i><label>マイページ</label>
+                </a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="{{ route('mypage.favorite') }}">
+                    <i class="far fa-star"></i>
                 </a>
             </li>
             @endguest

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -43,8 +44,9 @@ class UserController extends Controller
 
         return redirect()->route('mypage');
     }
+
     public function edit_address()
-     {                               //パスワード変更の処理のアクション
+     {                               //住所変更の処理のアクション
         $user = Auth::user();
 
         return view('users.edit_address', compact('user'));
@@ -68,6 +70,15 @@ class UserController extends Controller
         }
 
         return redirect()->route('mypage');
+    }
+
+    public function favorite()
+    {
+        $user = Auth::user();
+
+        $favorites = $user->favorites(Product::class)->get();
+
+        return view('users.favorite', compact('favorites'));
     }
 }
     
