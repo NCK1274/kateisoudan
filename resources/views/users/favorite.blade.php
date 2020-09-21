@@ -13,11 +13,11 @@
             <div class="col-md-8 mt-2">
                 <div class="d-inline-flex">
                     <a href="{{route('products.show', $fav)}}" class="w-25">
-                        <img src="{{ asset('img/dummy.png')}}" class="img-fuild w-100">
+                        <img src="{{ asset('https://picsum.photos/200')}}" class="img-fuild w-100">
                     </a>
                     <div class="container mt-3">
                         <h5 class="w-100 kateisoudan-favorite-item-text">{{App\Product::find($fav->favoriteable_id)->name}}</h5>
-                        <h6 class="w-100kateisoudan-favorite-item-text">￥{{App\Product::find($fav->favoriteable_id)->price}}</h6>
+                        <h6 class="w-100kateisoudan-favorite-item-text">￥{{App\Product::find($fav->favoriteable_id)->body}}</h6>
                     </div>
                 </div>
             </div>
@@ -25,9 +25,6 @@
                 <a href="/products/{{ $fav->id }}/favorite" class="kateisoudan-favorite-item-delete">
                     削除
                 </a>
-            </div>
-            <div class="col-md-2 d-flex align-items-center justify-content-end">
-                <button type="submit" class="btn kateisoudan-favorite-add-cart text-white w-100">カートに入れる</button>
             </div>
             @endforeach
         </div>

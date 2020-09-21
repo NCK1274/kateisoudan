@@ -7,7 +7,8 @@ use Overtrue\LaravelFavorite\Traits\Favoriteable;
 
 class Product extends Model
 {
-    // use Favoriteable;
+    use Favoriteable;
+    
     public function entry()
     {
     	return $this->belongTo('App\Entry');

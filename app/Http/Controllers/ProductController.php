@@ -18,6 +18,7 @@ class ProductController extends Controller
         return view('products.index',compact('products'));
     }
 
+// マイページのお気に入り
     public function favorite(Product $product)
     {
         $user = Auth::user();
@@ -62,9 +63,10 @@ class ProductController extends Controller
         return redirect()->route('products.show', ['id' => $product->id]);
     }
     
-    public function show(Product $product)
+    public function show(Request $request)
     {
-        return view('products.show',compact('product'));
+        
+        return view('products.show',compact('products'));
     }
 
     public function edit(Product $product)
