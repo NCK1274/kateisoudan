@@ -697,7 +697,6 @@ a {
   text-align: center;
   border-radius: 4px;
   color: #333;
-  color: #333;
   text-decoration: none;
   margin: 0;
   list-style: none;
@@ -800,7 +799,7 @@ a {
 }
 .footer-low {
   position: relative;
-  display: inline-flex;
+  display: block;
   font-size: 10px;
   width: 120px;
   height: 30px;
@@ -809,6 +808,21 @@ a {
   list-style: none;
   border: 3px solid #90cdeb;
   background-color: #fff;
+}
+.footer-low a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-low a:hover {
+  background-color: #90cdeb;
 }
 /* -------------------- copyright -------------------- */.copyright {
   clear: both;

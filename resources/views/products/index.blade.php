@@ -33,15 +33,16 @@
 
 </head>
 <body>
-  　<!-- TOPに戻る部分の実装-->
-  <div class="page_top"><a href="#"></a></div>
 
   <!--全体部分の実装-->
-  <div class="container bg-light py-5 my-5">
+  <div class="container bg-light">
+
+    <!-- TOPに戻る部分の実装-->
+  <div class="page_top"><a href="#"></a></div>
 
     <!-- 画像の横に水平に文章を設置 -->
     <div id="Flex">
-      <h2 class="text-center py-3">事業所一覧</h2>
+      <h2 class="text-center my-3">事業所一覧</h2>
     </div>
     <!-- 事業所 -->
     <div class="card my-5 " >
@@ -143,29 +144,5 @@
 
   </div>
   
-
-   <!--フッターお問合せ -->
-    <footer>
-      <div class="footer-txt">
-        <div class="footer-log">
-          <span class="footer-log__font">CtoC事業所マッチングサービス</span>
-            <br>
-            <a href="/">
-            <img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">
-            </a>
-        </div>  
-        <div class="footer-nav">
-          <ul class="footer-list">
-              <li class="footer-low"><a href="#">会社概要</a></li>
-              <li class="footer-low"><a href="#">利用規約</a></li>
-              <li class="footer-low"><a href="#">プライバシーポリシー</a></li> 
-              <li class="footer-low"><a href="#">お問合せ</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <div class="copyright">
-        <p>&copy; 2020 Katei Soudan Sitsu All Rights Reserved.</p>
-    </div>
 </body>
 @endsection

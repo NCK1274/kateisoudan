@@ -56,32 +56,27 @@
                 </h1>
                 <div class="header-nav">
                     <ul class="header-list">
-                      <li class="header-item"><a href="office">事業所一覧</a></li>
+                      <li class="header-item">
+                        <a href="products">事業所一覧</a></li>
                       @guest
-                            <li class="header-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="header-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
-                                </li>
-                            @endif
+
+                        <li class="header-item">
+                            <a class="nav-link" href="{{ route('register') }}">新規登録</a>
+                        </li>
+                        <li class="header-item">
+                        <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+                        </li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('ログアウト') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                        <li class="header-item">
+                            <a href="{{ route('mypage') }}">
+                                <i class="fas fa-user mr-1"></i>マイページ
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a class="nav-link" href="{{ route('mypage.favorite') }}">
+                                <i class="far fa-star"></i>気になるリスト
+                            </a>
+                        </li>
                         @endguest
                     </ul>
                 </div>
@@ -121,7 +116,7 @@
                     <ul class="main-item_top">
                         <li>
                         <span>事業所はこちらからお探しください</span>
-                        <a href="office" class="main-item_btn">事業所一覧</a> 
+                        <a href="products" class="main-item_btn">事業所一覧</a> 
                         </li>
                     </ul>    
                 </div>  
@@ -135,7 +130,7 @@
                     <li class="menu1"><a href="#info"><span>事業案内</span></a></li>
                     <li class="menu2"><a href="#cons"><span>相談内容</span></a></li>
                     <li class="menu3"><a href="#service"><span>サービス利用方法</span></a></li>
-                    <li class="menu4"><a href="office"><span>事業所一覧</span></a></li>
+                    <li class="menu4"><a href="products"><span>事業所一覧</span></a></li>
                     <li class="menu5"><a href="contact"><span>お問合せ</span></a></li>
                 </ul>
             </div>
@@ -186,7 +181,7 @@
                     いじめ、薬物、自殺志向、非行・不登校などの改善の為に、全国各地から少年少女を預かり先の提供することで、<br>私たちKSSがその架け橋となれる事を目指しております。<br>
                     支援地域密着型全国の同じ悩みを抱えた親御さんを支援できる受け入れ態勢を整えております。<br>
                     <p class="info-logo">
-                    <a href="office"><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">もっと詳しく</a>
+                    <a href="products"><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">もっと詳しく</a>
                     </p>
                 </dd>
             </dl>
@@ -318,7 +313,7 @@
                 <li><a href="#"><img src="{{asset('/img/office3.png')}}" alt="office3"></a></li>
             </ul>
             <li class="office-btn">
-            <a href="office">事業者一覧はこちらへ</a>
+            <a href="products">事業者一覧はこちらへ</a>
             </li>
         </section>
 

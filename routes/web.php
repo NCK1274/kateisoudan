@@ -19,23 +19,6 @@ Route::get('/',function(){
 	return view('home');
 });
 
-// 事業所一覧
-Route::get('office',function(){
-	return view('office');
-});
-Route::get('office5_1',function(){
-	return view('office5_1');
-});
-Route::get('office5_2',function(){
-	return view('office/office5_2');
-});
-Route::get('office4_1',function(){
-	return view('office4_1');
-});
-Route::get('office4_2',function(){
-	return view('office/office4_2');
-});
-
 // お問い合わせ
 Route::get('contact','ContactsController@index');
 Route::post('contact/confirm','ContactsController@confirm');

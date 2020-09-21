@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
         <title>@yield('title')</title>
          <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -35,9 +35,13 @@
         <div id="app">
             @component('components.header')
             @endcomponent
-            <main class="py-4 mb-5">
+            <main class="bg-light py-5">
                 @yield('content')               <!-- sectionと言うトンネルを通すための穴 -->
             </main>
+
+            @component('components.footer')
+            @endcomponent
+
         </div>   
     <!-- bootstrap-datepickerのjavascriptの処理-->
     <script>
