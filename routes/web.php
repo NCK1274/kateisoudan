@@ -39,11 +39,47 @@ Auth::routes();
 // 事業所一覧
 Route::get('products/{product}/favorite', 'ProductController@favorite')->name('products.favorite');
 Route::resource('products', 'ProductController');
-  Auth::routes(['verify' => true]);
+ Auth::routes(['verify' => true]);
+
+//事業所詳細
+ Route::get('office2_1',function(){
+	return view('office/office2_1');
+});
+Route::get('office2_2',function(){
+	return view('office/office2_2');
+});
+Route::get('office3_1',function(){
+	return view('office/office3_1');
+});
+Route::get('office3_2',function(){
+	return view('office/office3_2');
+});
+Route::get('office4_1',function(){
+	return view('office/office4_1');
+});
+Route::get('office4_2',function(){
+	return view('office/office4_2');
+});
+Route::get('office5_1',function(){
+	return view('office/office2_2');
+});
+Route::get('office5_2',function(){
+	return view('office/office5_2');
+});
 
 // 会社概要
 Route::get('index',function(){
 	return view('company/index');
+});
+
+// 利用規約
+Route::get('terms',function(){
+	return view('terms');
+});
+
+// プライバシーポリシー
+Route::get('privacy',function(){
+	return view('privacy');
 });
 
 // ユーザーからホスト先へのコンタクト

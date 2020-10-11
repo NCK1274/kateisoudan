@@ -11,6 +11,7 @@ class Product extends Model
     
     public function entry()
     {
-    	return $this->belongTo('App\Entry');
+    	return $this->belongsTo('App\Entry');
+    	// 紐付け作業
     }
 }

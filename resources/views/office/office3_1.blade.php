@@ -1,26 +1,66 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja" class="animated">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>kateisoudan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-@section('content')
+   <!--stylesheet cssリンク-->
+  <link href="/css/stylesheet3.css" rel="stylesheet" type="text/css">
+
+   <!--bootstrap cssのリンク-->
+  <link rel="stylesheet" href="{{asset('/css/bootstrap.css.map')}}">
+  <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+
+    <!--bootstrap jsのリンク-->
+  <script src="{{asset('/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('/js/bootstrap.js.map')}}"></script> 
 
 
-<!--全体部分の実装-->
+   <!--jqueryのリンク-->
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+   <!-- top.jsのリンク -->
+  <script src="{{asset('/js/top.js')}}"></script>
+
+    <!--フォントオーサムのリンク-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+   <!--Google Fontsのリンク-->
+<!--     <style>@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');</style>
+ -->
+</head>
+
+<body>
+  　<!-- TOPに戻る部分の実装-->
+  <div class="page_top"><a href="#"></a></div>
+
+  <!--ヘッダー部分の実装-->
+  <header>
+    <div class="header-top">
+      <h1 class="header-log">
+        <a><img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}"></a>
+      </h1>
+      <nav class="header-nav">
+        <ul class="header-list">
+          <li class="header-item"><a href="#">事業所一覧</a></li>
+          <li class="header-item"><a href="#">新規登録フォーム</a></li>
+          <li class="header-item"><a href="#">ログイン</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!--全体部分の実装-->
   <div class="container bg-light py-5 my-5">
-     @if($product->isFavoritedBy(Auth::user()))
-                        <a href="/products/{{ $product->id }}/favorite" class="btn samazon-favorite-button text-favorite w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り解除
-                        </a>
-                        @else
-                        <a href="/products/{{ $product->id }}/favorite" class="btn samazon-favorite-button text-favorite w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り
-                        </a>
-                        @endif
 
   <!--紹介画像部分の実装-->
     <div id="column">
 
-      <h2 class="text-center py-3">{{$product->name}}</h2>
+      <h2 class="text-center py-3">NPO法人かわもと学習サポートセンター</h2>
     </div>
     <div class="py-3 text-right">
       <button type="button" class="btn btn-secondary btn-lg">コンタクトを取る</button>
@@ -169,7 +209,7 @@
       <tbody>
         <tr>                                  <!-- trは見出しセル -->
           <th scope="row" style="background-color: silver">かわもとサポートセンターHP</th>
-          <td style colspan="3"><a href="{{asset('office5_2')}}" class="btn btn-primary">HPリンク</a></td>
+          <td style colspan="3"><a href="{{asset('office4_2')}}" class="btn btn-primary">HPリンク</a></td>
         </tr>
       </tbody>
     </table>
@@ -188,59 +228,30 @@
       <div class="star"><a href="#"></a></div>
     </div>
 
-
-
-<div class="d-flex justify-content-center">
-    <div class="row w-75">
-        <div class="col-5 offset-1">
-            <img src="{{ asset('img/dummy.png')}}" class="w-100 img-fuild">
+  <!--フッターお問合せ -->
+    <footer>
+      <div class="footer-txt">
+        <div class="footer-log">
+          <span class="footer-log__font">CtoC事業所マッチングサービス</span>
+            <br>
+            <a href="/">
+            <img alt="kssのロゴ" src="{{asset('/img/KSS.png')}}">
+            </a>
+        </div>  
+        <div class="footer-nav">
+          <ul class="footer-list">
+              <li class="footer-low"><a href="#">会社概要</a></li>
+              <li class="footer-low"><a href="#">利用規約</a></li>
+              <li class="footer-low"><a href="#">プライバシーポリシー</a></li> 
+              <li class="footer-low"><a href="#">お問合せ</a></li>
+          </ul>
         </div>
-        <div class="col">
-            <div class="d-flex flex-column">
-                <h1 class="">
-                    {{$product->name}}
-                </h1>
-                <p class="">
-                    {{$product->tel}}
-                </p>
-                <hr>
-                <p class="d-flex align-items-end">
-                    ￥{{$product->body}}
-                </p>
-                <hr>
-            </div>
-            @auth
-            <form method="POST" class="m-3 align-items-end">
-                {{ csrf_field() }}
-                <input type="hidden" name="id" value="{{$product->id}}">
-                <input type="hidden" name="name" value="{{$product->name}}">
-                <input type="hidden" name="price" value="{{$product->price}}">
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <input type="number" id="quantity" name="qty" min="1" value="1" class="form-control w-25">
-                    </div>
-                </div>
-                <input type="hidden" name="weight" value="0">
-                <div class="row">
-                    <div class="col-5">
-                        <a href="/products/{{ $product->id }}/favorite" class="btn kateisoudan-favorite-button text-dark w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り
-                        </a>
-                    </div>
-                </div>
-            </form>
-            @endauth
-        </div>
-
-        <div class="offset-1 col-11">
-            <hr class="w-100">
-            <h3 class="float-left">カスタマーレビュー</h3>
-        </div>
-
-        <div class="offset-1 col-10">
-            <!-- レビューを実装する箇所になります -->
-        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+        <p>&copy; 2020 Katei Soudan Sitsu All Rights Reserved.</p>
     </div>
-</div>
-@endsection
+
+</body>
+
+</html>

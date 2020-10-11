@@ -11,22 +11,26 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Entry::all();
-
-
+        // 作成した全ての企業を表示するアクション
+        $products = Product::all();
+        // 全てのデータを変数に代入
 
         return view('products.index',compact('products'));
+        // productsディレクトリのindex.bladeに渡す
+        // 第二引数はコントローラー内の変数をビューに渡す
     }
 
-// マイページのお気に入り
+        // マイページのお気に入り
     public function favorite(Product $product)
     {
         $user = Auth::user();
+        // 現在のユーザー情報を取得
 
-        if ($user->hasFavorited($product)) {
-            $user->unfavorite($product);
+        if ($user->hasFavorited($product)) {        //条件
+        // お気に入りかどうかのチェック    
+            $user->unfavorite($product);            //真であれば実行
         } else {
-            $user->favorite($product);
+            $user->favorite($product);              //偽であれば実行
         }
 
         return redirect()->route('products.show', $product);
@@ -63,10 +67,20 @@ class ProductController extends Controller
         return redirect()->route('products.show', ['id' => $product->id]);
     }
     
-    public function show(Request $request)
+    public function show(Product $product)
     {
         
-        return view('products.show',compact('products'));
+
+        // idを渡す
+        // $pro Product.new();
+
+        // // 問い合わせる
+        // $id =$request['product']['id']
+
+        // // 受けわたす
+        // $product = $pro->all($id);
+
+        return view('products.show',compact('product'));
     }
 
     public function edit(Product $product)

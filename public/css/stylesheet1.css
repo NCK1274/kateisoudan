@@ -1,328 +1,466 @@
 @charset "utf-8";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color: #333;
-	font-size: 13px;
-	line-height: 150%;
-
-}
-/*----------------- header -----------------*/
-
-header {
-  height: 100px;
-  width: 100%;
+  margin: 0;
+  height: 100%;
   padding: 0;
-  background-color: #fff;
-  color: #007bff;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #fff!important;
+  letter-spacing: 0.2em;
 }
-header .headline{
-    line-height: 100px;
-    float: left;
-    margin-left: 100px;
-}
-header .headline img{
-	width: 200px;
-	height: 80px;
-}
-.head-list {
-    line-height: 100px;
-    float: left;
-    margin-left: 30px;
-    list-style: none;
-
-}
-.head-list__item {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-
-}
-
-/* -------------------- wrapper -------------------- */
-.wrapper {
-	width: 100%;
-	margin: auto;
-	padding: 0px;
-	border: 0px;
-    background-color: #FFF;	
-    top: 10px;
-
-}
-/* -------------------- main -------------------- */
-.main {
-	width: 100%;
-
-}
-.main h2 {
-	margin: 0;
-	padding: 0;
-}
-.corridor {
-	width: 100%;
-	height: auto;
-}
-/* -------------------- Vegas -------------------- */
-.Vegas {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-.Vegas-Inner {
+/* -------------------- topページ -------------------- */
+.top {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: block;
 }
-.Vegas-Inner-Item {
+.top h2 {
+  position: absolute;
+  margin: 0;
+  margin-top: 170px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: normal;
   color: #fff;
-  font-size: 40px;
+  text-shadow: 1px 1px 1px #000;
+  font: 700 5vw "PT Sans Narrow"
+}
+/* -------------------- ヘッダーメニュー -------------------- */
+header {
+  padding: 30px 4% 10px;
+  position: fixed;
+  display: flex!important;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
 }
 
-/* -------------------- nav -------------------- */
-.navigation {
-	width: 100%;
-	box-sizing: content-box;
-}
-.navigation ul {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-.navigation ul li {
-	width: 20%;
-	text-align: center;
-}
-.navigation ul li a {
-	display: block;
-	height: 60px;
-	margin: 0;
-	padding: 10px;
-	color: #FFF;
-	font-size: 20px;
-	text-decoration: none;
-	background-color: blue;
-}
-.navigation ul li a:hover {
-	filter: drop-shadow(10px 10px 10px black);
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "PT Sans Narrow";
 }
 
-/* -------------------- infomation -------------------- */
-.infomation {
-	margin-bottom: 4px;
-
-}
-.infomation h2{
-	text-align: center;
-	margin: 0;
-	color: #FFF;
-	font-size: 30px;
-	display: block;
-    background: #F90;
-}
-/* -------------------- info -------------------- */
-.info {
-	width: 300px
-	padding: 0;
-	text-align: center;
-}
-.info-top img {
-	width: 20%;
+header a {
+  text-decoration: none;
+  color: #000;
 }
 
-.info-title {
-	width: 80%;
-	font-size: 20px;
-	margin-left: auto;;
-	margin-right: auto;
-	text-align: center;
-}	
-
-.info-area {
-	width: 100%;
-	height: 150px;
-	margin-top: 18px;
-	padding: 2px;
-}
-.info-item{
-	width: 200px;
-	height: 10px;
-	padding-top: ;
-	background-color: #08AEEA;
-	background-image: linear-gradient(0deg,#08AEEA 0%,#2AF598 100%);
-	text-align: center;
-	margin: 0 auto;
-}
-.info-logo {
-
-	text-align: center;
-	margin-top: 2px;
+header nav {
+  margin: 0 0 0 auto;
 }
 
-/* -------------------- consutation -------------------- */
-.consutation {
-	width: 100%;
-	margin: auto ;
-	padding: auto;
-	padding-top: 0;
-	clear: both;
-	display: block;
-	background-color: #d2e4ff;
-}
-.cons-top {
-	margin: 0;
-	padding: 3px;
-	color: #FFF;
-	font-size: 30px;
-	display: block;
-    background: #F90;
-	text-align: center;
-}
-/* -------------------- cons -------------------- */
-.cons-txt {
-	width: 300px
-	margin-bottom: 18px;
-	padding: 2px;
-	text-align: center;
-}
-.cons-txt .cons-img {
-	width: 30%;
-	padding: 9px;
-    border: 9px solid blue;
-    background-color: yellow;
-    border-radius: 130px;
+header ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
 }
 
-.cons-bottom {
-	width: 80%;
-	margin-left: auto;;
-	margin-right: auto;
-	text-align: initial;
-}
-/* -------------------- service -------------------- */
-.service {
-	width: 100%;
-	margin: auto ;
-	padding: 70px 0;
-	padding-top: 0;
-	clear: both;
-	display: block;
-	background-color: #f4f4f4;
-}
-.service-body{
-	text-align: center;
-}
-.service-txt h2 {
-	margin: 0;
-	padding: 3px;
-	color: #FFF;
-	font-size: 30px;
-	display: block;
-    background: #F90
-}	
-/* -------------------- ser -------------------- */
-.grid {
-	grid-auto-rows: 200px;
-    grid-template-columns: repeat(auto-fit, 200px);
-    justify-content: center; 
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px;
-}
-/* -------------------- system -------------------- */
-.system{
-	text-align: center;
-	background-color: #065fe3;
-}
-.system h2{
-	margin: 0;
-	padding: 3px;
-	color: #FFF;
-	font-size: 30px;
-	display: block;
-    background: #F90
-}
-/* -------------------- office -------------------- */
-.office{
-	text-align: center;
-}
-.office h2{
-	margin: 0;
-	padding: 3px;
-	color: #FFF;
-	font-size: 30px;
-	display: block;
-    background: #F90
-}
-.office-top{
-	padding: 20px 30px;
-    background-color: #f4f4f4;
-    border-radius: 4px;
-
-}
-.office p{
-	margin: 0;
-    color: #1d1d1d;
-    font-size: 1rem;
-    line-height: 1.5;
-
+header li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
 }
 
-/* -------------------- entry -------------------- */
-.entry{
-	background-color: #39F;
+.sp-nav {
+  display: none;
 }
-.entry-box{
-	font-size: 30px;
-}
-.entry-box__btn{
+/* -------------------- レスポンシブ対応 -------------------- */
+@media screen and (max-width: 640px) {
+  .pc-nav {
+    display: none;
+  }
 
-}
+  .sp-nav {
+    z-index: 2;
 
-/* -------------------- footer -------------------- */
-.footer{
-  	height: auto;
-}	
-	
-.footer-txt{
+    /*前面に出す*/
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 0;
-	background-color: #d2e4ff;
-}
-.footer-log{
-	width: 140px;
-	margin: 0;
-	line-height: 1;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all .2s ease-in-out;
 
+    /*closeを押した時に表示、非表示にする*/
+  }
+
+  /* -------------------- ハンバーガーメニュー -------------------- */
+
+  #hamburger {
+    position: relative;
+
+    /*ハンバーガーメニューのボックスを基準にする*/
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin: 0 0 0 auto;
+  } 
+
+  #hamburger  span {
+      position: absolute;
+
+      /*ハンバーガーメニューの線の位置を決める記述*/
+      top: 50%;
+
+      /*上から丁度半分*/
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transform: translateY(-50%);
+    }
+
+    #hamburger::before {
+      content: '';
+
+      /*ハンバーガーメニューの線自体を記述、上の線*/
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    #hamburger::after {
+      content: '';
+
+      /*ハンバーガーメニューの線自体を記述、下の線*/
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+  /* -------------------- スマホメニュー -------------------- */
+
+  .sp-nav ul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+   }
+   .sp-nav li {
+      margin: 0;
+      padding: 0;
+   }
+   .sp-nav li span {
+      font-size: 15px;
+      color: #fff;
+   }
+   .sp-nav li a, .sp-nav li span {
+      display: block;
+      padding: 20px 0;
+   }
+   /*-閉じるアイコンー*/
+   .sp-nav .close {
+      position: relative;
+      padding-left: 20px;
+   }
+   .sp-nav .close::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: #fff;
+      transform: rotate( 45deg );
+   }
+   .sp-nav .close::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: #fff;
+      transform: rotate( -45deg );
+   }
+   .toggle {
+      transform: translateY( 0 );
+      opacity: 1;
+   }
+
+  /* -------------------- vegas -------------------- */
+
+  .main-visual {
+    padding: 0 4%;
+  }
+
+  h2 {
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: .3em;
+    text-shadow: 1px 1px 1px #000;
+    font: 700 4vw "PT Sans Narrow";
+  }
 }
-.footer-log img{
-	width: 100%;
-	height: auto;
-	vertical-align: top;
+
+/* -------------------- top-logo -------------------- */
+
+.top-logo {
+  position: absolute;
+  bottom: 5%
+  width: 50%;
+  height: 50%;
+  transition: opacity 300ms ease-in-out;
 }
-.footer-nav{
-	display: inline-block;
-	float: right;
-	margin-left: 30px;
-    list-style: none;
+/* -------------------- logo -------------------- */
+.logo {
+  position: absolute !important;
+  height: 30%;
+  width: 35%;
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+  transition: 1s all;
 }
-.footer-low{
-	display: inline-block;
- 	width: 50%;
-  	letter-spacing: 0em;
-  	list-style: none;
-	border: 3px solid #90cdeb;
+/* -------------------- human -------------------- */
+.human {
+    position: absolute;
+    bottom: 13%;
+    right: 5%;
+    width: 100%;
+    height: 35%;
+    transition: 2.5s;
+    transition: opacity 300ms ease-in-out;
 }
+    .animated .human {
+        transform: rotate(5deg);
+    }
+
+/* -------------------- human-poster -------------------- */
+.human-poster {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 30px #000;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    background: #000;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+}
+
+.human-label {
+    position: absolute;
+    right: -20px;
+    bottom: 5px;
+    width: 125px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    padding: 5px;
+    font: bold 18px "Marker Felt", "Comic Sans MS", Arial, sans-serif;
+    display: inline-block;
+    box-shadow: 0 5px 30px #000;
+    transition: .2s;
+
+    opacity: 0;
+    transform: rotateX(90deg) rotateZ(-15deg);
+}
+.human-label.animated {
+    opacity: 1;
+    transform: rotateX(0deg) rotateZ(-15deg);
+    }
+/* -------------------- icon -------------------- */
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+.follow-me li a[href*="amazon.co.jp"]::before,
+.follow-me li a[href*="amazon.com"]::before         { border-color: #ff9900; background-color: #ff9900; content: "\f270"; }
+.follow-me li a[href*="codepen.io"]::before         { border-color: #000000; background-color: #000000; content: "\f1cb"; }
+.follow-me li a[href*="delicious.com"]::before      { border-color: #3399ff; background-color: #3399ff; content: "\f1a5"; }
+.follow-me li a[href*="deviantart.com"]::before     { border-color: #05cc47; background-color: #05cc47; content: "\f1bd"; }
+.follow-me li a[href*="digg.com"]::before           { border-color: #000000; background-color: #000000; content: "\f1a6"; }
+.follow-me li a[href*="dribble.com"]::before        { border-color: #000000; background-color: #ea4c89; content: "\f17d"; }
+.follow-me li a[href*="dropbox.com"]::before        { border-color: #007ee5; background-color: #007ee5; content: "\f16b"; }
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; background-color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="feedly.com"]::before         { border-color: #6cc655; background-color: #6cc655; content: "\f09e"; }
+.follow-me li a[href*="flickr.com"]::before         { border-color: #0063cc; background-color: #0063dc; content: "\f16e"; }
+.follow-me li a[href*="foursquare.com"]::before     { border-color: #f94877; background-color: #f94877; content: "\f180"; }
+.follow-me li a[href*="github.com"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
+.follow-me li a[href*="plus.google.com"]::before    { border-color: #dc4e41; background-color: #dc4e41; content: "\f0d5"; }
+.follow-me li a[href*="b.hatena.ne.jp"]::before     { border-color: #008fde; background-color: #008fde; content: "\f027"; font-family: blogicon; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #125688; background-color: #125688; content: "\f16d"; }
+.follow-me li a[href*="last.fm"]::before            { border-color: #d51007; background-color: #d51007; content: "\f202"; }
+.follow-me li a[href*="linkedin.com"]::before       { border-color: #0077b5; background-color: #0077b5; content: "\f0e1"; }
+.follow-me li a[href*="nicovideo.jp"]::before       { border-color: #eaeaea; background-color: #eaeaea; content: "\f047"; font-family: blogicon; }
+.follow-me li a[href*="pinterest.com"]::before      { border-color: #bd081c; background-color: #bd081c; content: "\f0d2"; }
+.follow-me li a[href*="getpocket.com"]::before      { border-color: #ef3f56; background-color: #ef3f56; content: "\f265"; }
+.follow-me li a[href*="reddit.com"]::before         { border-color: #ff4500; background-color: #ff4500; content: "\f1a1"; }
+.follow-me li a[href*="skype.com"]::before,
+.follow-me li a[href*="skype:"]::before             { border-color: #00aff0; background-color: #00aff0; content: "\f17e"; }
+.follow-me li a[href*="slideshare.net"]::before     { border-color: #2d2d2d; background-color: #2d2d2d; content: "\f1e7"; }
+.follow-me li a[href*="spotify.com"]::before        { border-color: #84bd00; background-color: #84bd00; content: "\f1bc"; }
+.follow-me li a[href*="steamcommunity.com"]::before { border-color: #171a21; background-color: #171a21; content: "\f1b6"; }
+.follow-me li a[href*="stumbleupon.com"]::before    { border-color: #eb4929; background-color: #eb4929; content: "\f1a4"; }
+.follow-me li a[href*="tumblr.com"]::before         { border-color: #36465d; background-color: #36465d; content: "\f173"; }
+.follow-me li a[href*="twitch.tv"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+.follow-me li a[href*="vimeo.com"]::before          { border-color: #1ab7ea; background-color: #1ab7ea; content: "\f27d"; }
+.follow-me li a[href*="vine.co"]::before            { border-color: #11b58a; background-color: #11b58a; content: "\f1ca"; }
+.follow-me li a[href*="weibo.com"]::before          { border-color: #e6162d; background-color: #e6162d; content: "\f18a"; }
+.follow-me li a[href*="whatsapp.com"]::before       { border-color: #64d548; background-color: #64d548; content: "\f232"; }
+.follow-me li a[href*="wordpress.com"]::before,
+.follow-me li a[href*="wordpress.org"]::before      { border-color: #21759b; background-color: #21759b; content: "\f19a"; }
+.follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; background-color: #cd201f; content: "\f16a"; }
+.follow-me li a[href$="/feed"]::before              { border-color: #ffa500; background-color: #ffa500; content: "\f09e"; }
+.follow-me li a[href$="/subscribe"]::before         { border-color: #363636; background-color: #363636; content: "\f000"; font-family: blogicon; }
+.follow-me li a:hover::before {
+  background-color: #fff;
+}
+.follow-me li a[href*="amazon.co.jp"]:hover::before,
+.follow-me li a[href*="amazon.com"]:hover::before         { color: #ff9900; }
+.follow-me li a[href*="codepen.io"]:hover::before         { color: #000000; }
+.follow-me li a[href*="delicious.com"]:hover::before      { color: #3399ff; }
+.follow-me li a[href*="deviantart.com"]:hover::before     { color: #05cc47; }
+.follow-me li a[href*="digg.com"]:hover::before           { color: #000000; }
+.follow-me li a[href*="dribble.com"]:hover::before        { color: #ea4c89; }
+.follow-me li a[href*="dropbox.com"]:hover::before        { color: #007ee5; }
+.follow-me li a[href*="facebook.com"]:hover::before       { color: #3b5998; }
+.follow-me li a[href*="feedly.com"]:hover::before         { color: #6cc655; }
+.follow-me li a[href*="flickr.com"]:hover::before         { color: #0063dc; }
+.follow-me li a[href*="foursquare.com"]:hover::before     { color: #f94877; }
+.follow-me li a[href*="github.com"]:hover::before         { color: #181717; }
+.follow-me li a[href*="plus.google.com"]:hover::before    { color: #dc4e41; }
+.follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { color: #008fde; }
+.follow-me li a[href*="instagram.com"]:hover::before      { color: #125688; }
+.follow-me li a[href*="last.fm"]:hover::before            { color: #d51007; }
+.follow-me li a[href*="linkedin.com"]:hover::before       { color: #0077b5; }
+.follow-me li a[href*="nicovideo.jp"]:hover::before       { color: #eaeaea; }
+.follow-me li a[href*="pinterest.com"]:hover::before      { color: #bd081c; }
+.follow-me li a[href*="getpocket.com"]:hover::before      { color: #ef3f56; }
+.follow-me li a[href*="reddit.com"]:hover::before         { color: #ff4500; }
+.follow-me li a[href*="skype.com"]:hover::before,
+.follow-me li a[href*="skype:"]:hover::before             { color: #00aff0; }
+.follow-me li a[href*="slideshare.net"]:hover::before     { color: #2d2d2d; }
+.follow-me li a[href*="spotify.com"]:hover::before        { color: #84bd00; }
+.follow-me li a[href*="steamcommunity.com"]:hover::before { color: #171a21; }
+.follow-me li a[href*="stumbleupon.com"]:hover::before    { color: #eb4929; }
+.follow-me li a[href*="tumblr.com"]:hover::before         { color: #36465d; }
+.follow-me li a[href*="twitch.tv"]:hover::before          { color: #6441a5; }
+.follow-me li a[href*="twitter.com"]:hover::before        { color: #55acee; }
+.follow-me li a[href*="vimeo.com"]:hover::before          { color: #1ab7ea; }
+.follow-me li a[href*="vine.co"]:hover::before            { color: #11b58a; }
+.follow-me li a[href*="weibo.com"]:hover::before          { color: #e6162d; }
+.follow-me li a[href*="whatsapp.com"]:hover::before       { color: #64d548; }
+.follow-me li a[href*="wordpress.com"]:hover::before,
+.follow-me li a[href*="wordpress.org"]:hover::before      { color: #21759b; }
+.follow-me li a[href*="youtube.com"]:hover::before        { color: #cd201f; }
+.follow-me li a[href$="/feed"]:hover::before              { color: #ffa500; }
+.follow-me li a[href$="/subscribe"]:hover::before         { color: #363636; }
+
+/* -------------------- pagetop -------------------- */
+
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #BB0000;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #000;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #BB0000;
+}
+
 /* -------------------- copyright -------------------- */
-.copyright {
-	clear: both;
-	width: 100%;
-	height: 30px;
-	padding: 5px 0 5px 0;
-	background: #065fe3;
-	color: #FFF;
-	font-weight: bold;
-	text-align: center;
+
+.copylight {
+  clear: both;
+  /*position: absolute;*/
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
 }

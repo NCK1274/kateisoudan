@@ -344,8 +344,8 @@
                 <div class="footer-nav">
                     <ul class="footer-list">
                         <li class="footer-low"><a href="index">会社概要</a></li>
-                        <li class="footer-low"><a href="#">利用規約</a></li>
-                        <li class="footer-low"><a href="#">プライバシーポリシー</a></li> 
+                        <li class="footer-low"><a href="terms">利用規約</a></li>
+                        <li class="footer-low"><a href="privacy">プライバシーポリシー</a></li> 
                         <li class="footer-low"><a href="contact">お問合せ</a></li>
                     </ul>
                 </div>

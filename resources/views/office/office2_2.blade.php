@@ -8,15 +8,15 @@
 
    <!--stylesheet cssリンク-->
   <link rel="stylesheet" href="{{ asset('/css/stylesheet1.css') }}" type="text/css">
+ <!--  <link href="/css/stylesheet1.css" rel="stylesheet" type="text/css"> -->
 
    <!--bootstrap cssのリンク-->
   <link rel="stylesheet" href="{{asset('/css/bootstrap.css.map')}}">
   <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
 
     <!--bootstrap jsのリンク-->
-  <script src="{{asset('/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('/js/bootstrap.js.map')}}"></script> 
-
+  <link rel="stylesheet" href="{{asset('/css/bootstrap.css.map')}}">
+  <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
 
    <!--jqueryのリンク-->
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
@@ -50,7 +50,7 @@
     <!--ヘッダー部分の実装-->
   <header>
     <h1>
-        <a href="/">Headz&Time</a>
+        <a href="/">子供行動科学研究所</a>
     </h1>
       <!--PCヘッダー部分の実装-->
     <nav class="pc-nav">
@@ -79,15 +79,10 @@
 
     <!--トップ部分の実装-->
   <div class='top keyvisual'>
-    <h2>HEADZTIME HISTORY</h2>
-    <!--メイン部分の実装-->
-    <div class="top-logo">
-      <img class="logo" src="{{asset('/img/headz.png')}}">
-    </div>
+    <h2>子供行動科学研究所</h2>
+    
   <!--human部分の実装-->
     <div class="human">
-      <div id="men" class ="human-poster vegas-container img-responsive" style="padding: 0px;">
-      </div>
       <div class="human-label animated">
         <p>MEMBER</p>
       </div>
